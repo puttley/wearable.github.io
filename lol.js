@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			port.onReceive = data => {
 				let textDecoder = new TextDecoder();
 				text.value = textDecoder.decode(data).trim();
+				console.log(text.value);
 				clearInterval(timer);
 			};
 			port.onReceiveError = error => {
