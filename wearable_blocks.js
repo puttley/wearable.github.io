@@ -57,7 +57,8 @@ Blockly.Blocks['exp_delay'] = {
 Blockly.Blocks['exp_show_image'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("show image");
+        .appendField("show image")
+        .appendField(new Blockly.FieldDropdown([["heart","150"], ["smiley","151"], ["frowny","152"]]), "images");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(230);
