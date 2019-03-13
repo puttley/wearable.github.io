@@ -106,6 +106,17 @@ Blockly.Blocks['exp_clear_block'] = {
   }
 };
 
+Blockly.Blocks['exp_start'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("start");
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
 Blockly.Blocks['pixel_matrix'] = {
   init: function() {
     this.appendDummyInput()

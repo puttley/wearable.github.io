@@ -50,6 +50,12 @@ Blockly.JavaScript['exp_if_block'] = function(block) {
 
 Blockly.JavaScript['exp_clear_block'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
+  var code = 248 + ',';
+  return code;
+};
+
+Blockly.JavaScript['exp_start'] = function(block) {
+  // TODO: Assemble JavaScript into code variable.
   var code = '(' + ',';
   return code;
 };
