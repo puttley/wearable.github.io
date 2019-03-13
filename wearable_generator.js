@@ -48,7 +48,11 @@ Blockly.JavaScript['exp_if_block'] = function(block) {
   return code;
 };
 
-
+Blockly.JavaScript['exp_clear_block'] = function(block) {
+  // TODO: Assemble JavaScript into code variable.
+  var code = '(' + ',';
+  return code;
+};
 
 Blockly.JavaScript['pixel_matrix'] = function(block) {
   var checkbox_scroll = block.getFieldValue('scroll') == 'TRUE';

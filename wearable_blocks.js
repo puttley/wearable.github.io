@@ -94,6 +94,17 @@ Blockly.Blocks['exp_if_block'] = {
   }
 };
 
+Blockly.Blocks['exp_clear_block'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("clear screen");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
 
 Blockly.Blocks['pixel_matrix'] = {
   init: function() {
