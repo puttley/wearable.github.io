@@ -118,6 +118,19 @@ Blockly.Blocks['exp_start'] = {
   }
 };
 
+Blockly.Blocks['exp_sound'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("play sound")
+        .appendField(new Blockly.FieldDropdown([["beep","200"], ["note 1","201"], ["note 2","202"]]), "sounds");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
 Blockly.Blocks['pixel_matrix'] = {
   init: function() {
     this.appendDummyInput()
