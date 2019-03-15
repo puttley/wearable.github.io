@@ -59,7 +59,6 @@ Blockly.Blocks['exp_show_image'] = {
     this.appendDummyInput()
         .appendField("show image")
         .appendField(new Blockly.FieldDropdown([["heart","150"], ["purple bird","151"], ["smiley face","152"], ["frowny face","153"], ["right arrow","154"], ["left arrow","155"], ["up arrow","156"], ["down arrow","157"]]), "images");
-        .appendField(new Blockly.FieldImage("https://github.com/puttley/wearable.github.io/tree/master/images/blink.png", 50, 50, "*"));
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(230);
@@ -126,6 +125,17 @@ Blockly.Blocks['exp_sound'] = {
         .appendField(new Blockly.FieldDropdown([["beep","200"], ["note 1","201"], ["note 2","202"]]), "sounds");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['exp_image'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("https://github.com/puttley/wearable.github.io/blob/master/images/star_on.gif", 15, 15, "*"))
+        .appendField(new Blockly.FieldImage("https://www.gstatic.com/codesite/ph/images/star_on.gif", 15, 15, "*"));
     this.setColour(230);
  this.setTooltip("");
  this.setHelpUrl("");
