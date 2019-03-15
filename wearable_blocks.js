@@ -147,6 +147,8 @@ Blockly.Blocks['exp_tone'] = {
         .appendField("play tone")
         .appendField(new Blockly.FieldTextInput("1000"), "hz")
         .appendField("Hz");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
     this.setColour(230);
  this.setTooltip("");
  this.setHelpUrl("");
