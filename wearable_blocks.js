@@ -141,6 +141,18 @@ Blockly.Blocks['exp_image'] = {
   }
 };
 
+Blockly.Blocks['exp_tone'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("play tone")
+        .appendField(new Blockly.FieldTextInput("1000"), "hz")
+        .appendField("Hz");
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
 Blockly.Blocks['pixel_matrix'] = {
   init: function() {
     this.appendDummyInput()

@@ -68,6 +68,13 @@ Blockly.JavaScript['exp_sound'] = function(block) {
   return code;
 };
 
+Blockly.JavaScript['exp_tone'] = function(block) {
+  var text_hz = block.getFieldValue('hz');
+  // TODO: Assemble JavaScript into code variable.
+  var code = 246 + ',' + text_hz + ',';
+  return code;
+};
+
 Blockly.JavaScript['pixel_matrix'] = function(block) {
   var checkbox_scroll = block.getFieldValue('scroll') == 'TRUE';
   var colour_pixel_8 = block.getFieldValue('PIXEL 8');
