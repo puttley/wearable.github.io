@@ -134,8 +134,7 @@ Blockly.Blocks['exp_sound'] = {
 Blockly.Blocks['exp_image'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldImage("images/dc-motor.jpg", 15, 15, "*"))
-        .appendField(new Blockly.FieldImage("https://www.gstatic.com/codesite/ph/images/progress.gif", 30, 30, "*"));
+        .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"))
     this.setColour(230);
  this.setTooltip("");
  this.setHelpUrl("");
