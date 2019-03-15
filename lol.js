@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	serial.getPorts().then(ports => {
 		if (ports.length == 0) {
-			device.textContent = 'No device found.';
+			device.textContent = 'Codeable Wearable not Found.';
 			main.classList.add('error');
 		} else {
 			device.textContent = 'Connecting...';
