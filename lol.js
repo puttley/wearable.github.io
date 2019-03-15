@@ -60,9 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			};
 
 	//  Bottom three lines disabled by Paul - disables timer from pinging serial every 200ms
-			timer = setInterval(() => {
-				port.send(new TextEncoder("utf-8").encode("\n"));
-			}, 200);
+	//		timer = setInterval(() => {
+	//			port.send(new TextEncoder("utf-8").encode("\n"));
+	//		}, 200);
 
 		}, error => {
 			device.textContent = error;
