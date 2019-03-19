@@ -155,6 +155,22 @@ Blockly.Blocks['exp_tone'] = {
   }
 };
 
+Blockly.Blocks['exp_note'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("play note")
+        .appendField(new Blockly.FieldDropdown([["A","1"], ["A#","2"], ["B","3"]]), "sounds")
+        .appendField("duration")
+        .appendField(new Blockly.FieldDropdown([["0.25","25"], ["0.5","50"], ["1","1"]]), "duration")
+        .appendField("sec");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
 Blockly.Blocks['pixel_matrix'] = {
   init: function() {
     this.appendDummyInput()

@@ -75,6 +75,14 @@ Blockly.JavaScript['exp_tone'] = function(block) {
   return code;
 };
 
+Blockly.JavaScript['exp_note'] = function(block) {
+  var dropdown_sounds = block.getFieldValue('sounds');
+  var dropdown_duration = block.getFieldValue('duration');
+  // TODO: Assemble JavaScript into code variable.
+  var code = 246 + ',' + dropdown_sounds + ',' + dropdown_duration + ',';
+  return code;
+};
+
 Blockly.JavaScript['pixel_matrix'] = function(block) {
   var checkbox_scroll = block.getFieldValue('scroll') == 'TRUE';
   var colour_pixel_8 = block.getFieldValue('PIXEL 8');
