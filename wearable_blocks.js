@@ -110,6 +110,7 @@ Blockly.Blocks['exp_clear_block'] = {
 Blockly.Blocks['exp_start'] = {
   init: function() {
     this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"))
         .appendField("start");
     this.setNextStatement(true, null);
     this.setColour(230);
