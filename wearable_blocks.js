@@ -119,19 +119,7 @@ Blockly.Blocks['exp_start'] = {
   }
 };
 
-Blockly.Blocks['exp_end'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField("end")
-        .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"))
-        .appendField("repeat")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "repeat");
-    this.setPreviousStatement(true, null);
-    this.setColour(230);
- this.setTooltip("");
- this.setHelpUrl("");
-  }
-};
+
 
 Blockly.Blocks['exp_sound'] = {
   init: function() {
