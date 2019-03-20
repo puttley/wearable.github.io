@@ -165,7 +165,7 @@ Blockly.Blocks['exp_note'] = {
         ["F#5","31"], ["G5","32"], ["GS5","33"], ["A5","34"], ["A#5","35"], ["B5","36"], ["C6","37"], ["C#6","38"], ["D6","39"], ["D#6","40"],
         ["E6","41"], ["F6","42"], ["F#6","43"], ["G6","44"], ["G#6","45"], ["A6","46"], ["A#6","47"], ["B6","48"], ["C7","49"]]), "sounds")
         .appendField("duration")
-        .appendField(new Blockly.FieldDropdown([["0.25","25"], ["0.5","50"], ["1","1"]]), "duration")
+        .appendField(new Blockly.FieldDropdown([["0.25","25"], ["0.5","50"], ["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"]]), "duration")
         .appendField("sec");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
