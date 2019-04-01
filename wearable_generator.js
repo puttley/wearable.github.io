@@ -64,7 +64,7 @@ Blockly.JavaScript['exp_start'] = function(block) {
 Blockly.JavaScript['exp_sound'] = function(block) {
   var dropdown_sounds = block.getFieldValue('sounds');
   // TODO: Assemble JavaScript into code variable.
-  var code = 246 + ',' + dropdown_sounds + ',';
+  var code = 245 + ',' + dropdown_sounds + ',';
   return code;
 };
 

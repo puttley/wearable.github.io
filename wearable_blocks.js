@@ -137,7 +137,7 @@ Blockly.Blocks['exp_sound'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("play sound")
-        .appendField(new Blockly.FieldDropdown([["beep","200"], ["note 1","201"], ["note 2","202"]]), "sounds");
+        .appendField(new Blockly.FieldDropdown([["space sound 1","1"], ["space sound 2","2"], ["random beep","3"]]), "sounds");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(330);
