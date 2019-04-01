@@ -84,7 +84,6 @@ Blockly.JavaScript['exp_note'] = function(block) {
 };
 
 Blockly.JavaScript['pixel_matrix'] = function(block) {
-//  var checkbox_scroll = block.getFieldValue('scroll') == 'TRUE';
   var colour_pixel_8 = block.getFieldValue('PIXEL 8');
   var colour_pixel_7 = block.getFieldValue('PIXEL 7');
   var colour_pixel_6 = block.getFieldValue('PIXEL 6');
@@ -149,9 +148,6 @@ Blockly.JavaScript['pixel_matrix'] = function(block) {
   var colour_pixel_59 = block.getFieldValue('PIXEL 59');
   var colour_pixel_58 = block.getFieldValue('PIXEL 58');
   var colour_pixel_57 = block.getFieldValue('PIXEL 57');
-
-//  if(checkbox_scroll == false){checkbox_scroll = 0 + ',';}
-//  if(checkbox_scroll == true) {checkbox_scroll = 1 + ',';}
 
   var code = 250 + ',' + pickycolor(colour_pixel_1) + pickycolor(colour_pixel_2) + pickycolor(colour_pixel_3) + pickycolor(colour_pixel_4) + pickycolor(colour_pixel_5) + pickycolor(colour_pixel_6) + pickycolor(colour_pixel_7) + pickycolor(colour_pixel_8) +
     pickycolor(colour_pixel_9) + pickycolor(colour_pixel_10) + pickycolor(colour_pixel_11) + pickycolor(colour_pixel_12) + pickycolor(colour_pixel_13) + pickycolor(colour_pixel_14) + pickycolor(colour_pixel_15) + pickycolor(colour_pixel_16) +
