@@ -194,8 +194,8 @@ Blockly.Blocks['pixel_matrix'] = {
   init: function() {
     this.appendDummyInput()
         .setAlign(Blockly.ALIGN_CENTRE)
-        .appendField("scroll image")
-        .appendField(new Blockly.FieldCheckbox("FALSE"), "scroll");
+        .appendField("create image")
+    //    .appendField(new Blockly.FieldCheckbox("FALSE"), "scroll");
     this.appendDummyInput()
         .appendField(new Blockly.FieldColour("#000000"), "PIXEL 8")
         .appendField(new Blockly.FieldColour("#000000"), "PIXEL 7")
