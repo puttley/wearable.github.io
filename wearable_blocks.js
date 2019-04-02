@@ -45,7 +45,7 @@ Blockly.Blocks['exp_delay'] = {
     this.appendDummyInput()
         .appendField("wait")
         .appendField(new Blockly.FieldDropdown([["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"]]), "seconds")
-        .appendField("sec");
+        .appendField("seconds");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(230);
@@ -181,7 +181,7 @@ Blockly.Blocks['exp_note'] = {
         .appendField("beats");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(230);
+    this.setColour(330);
  this.setTooltip("");
  this.setHelpUrl("");
   }
