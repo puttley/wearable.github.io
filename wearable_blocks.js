@@ -43,8 +43,8 @@ Blockly.Blocks['exp_blink'] = {
 Blockly.Blocks['exp_delay'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("delay")
-        .appendField(new Blockly.FieldDropdown([["1","1"], ["2","2"], ["3","3"]]), "seconds")
+        .appendField("wait")
+        .appendField(new Blockly.FieldDropdown([["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"]]), "seconds")
         .appendField("sec");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -83,8 +83,8 @@ Blockly.Blocks['exp_character'] = {
 Blockly.Blocks['exp_if_block'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("if")
-        .appendField(new Blockly.FieldDropdown([["tilted up","1"], ["tilted down","2"], ["tilted left","3"], ["tilted right","4"], ["no tilt (face up)","5"]]), "ACTION");
+        .appendField("when tilting")
+        .appendField(new Blockly.FieldDropdown([["level (face up)","5"], ["left","3"], ["right","4"], ["forward","1"], ["backward","2"]]), "ACTION");
     this.appendStatementInput("doBlocks")
         .setCheck(null);
     this.setPreviousStatement(true, null);
@@ -137,7 +137,8 @@ Blockly.Blocks['exp_sound'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("play sound")
-        .appendField(new Blockly.FieldDropdown([["space sound 1","1"], ["space sound 2","2"], ["random beep","3"]]), "sounds");
+        .appendField(new Blockly.FieldDropdown([["space sound 1","1"], ["space sound 2","2"], ["random beep","3"]]), "sounds")
+        .appendField("until done");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(330);
@@ -174,17 +175,13 @@ Blockly.Blocks['exp_note'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("play note")
-        .appendField(new Blockly.FieldDropdown([["C3","1"], ["C#3","2"], ["D3","3"], ["D#3","4"], ["E3","5"], ["F3","6"], ["F#3","7"], ["G3","8"], ["G#3","9"], ["A3","10"],
-        ["A#3","11"], ["B3","12"], ["C4","13"], ["C#4","14"], ["D4","15"], ["D#4","16"], ["E4","17"], ["F4","18"], ["F#4","19"], ["G4","20"],
-        ["G#4","21"], ["A4","22"], ["A#4","23"], ["B4","24"], ["C5","25"], ["C#5","26"], ["D5","27"], ["D#5","28"], ["E5","29"], ["F5","30"],
-        ["F#5","31"], ["G5","32"], ["G#5","33"], ["A5","34"], ["A#5","35"], ["B5","36"], ["C6","37"], ["C#6","38"], ["D6","39"], ["D#6","40"],
-        ["E6","41"], ["F6","42"], ["F#6","43"], ["G6","44"], ["G#6","45"], ["A6","46"], ["A#6","47"], ["B6","48"], ["C7","49"]]), "sounds")
-        .appendField("duration")
+        .appendField(new Blockly.FieldDropdown([["C3","1"], ["C#3","2"], ["D3","3"]]), "sounds")
+        .appendField("for")
         .appendField(new Blockly.FieldDropdown([["0.25","25"], ["0.5","50"], ["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"]]), "duration")
-        .appendField("sec");
+        .appendField("beats");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(330);
+    this.setColour(230);
  this.setTooltip("");
  this.setHelpUrl("");
   }
