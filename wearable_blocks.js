@@ -84,7 +84,7 @@ Blockly.Blocks['exp_if_block'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("if")
-        .appendField(new Blockly.FieldDropdown([["1","1"], ["2","2"], ["3","3"]]), "ACTION");
+        .appendField(new Blockly.FieldDropdown([["tilted up","1"], ["tilted down","2"], ["tilted left","3"], ["tilted right","4"], ["no tilt (face up)","5"]]), "ACTION");
     this.appendStatementInput("doBlocks")
         .setCheck(null);
     this.setPreviousStatement(true, null);
