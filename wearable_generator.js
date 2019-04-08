@@ -36,8 +36,9 @@ Blockly.JavaScript['exp_show_image'] = function(block) {
 
 Blockly.JavaScript['exp_character'] = function(block) {
   var dropdown_character = block.getFieldValue('character');
+  var colour_color = block.getFieldValue('color');
   // TODO: Assemble JavaScript into code variable.
-  var code = 249 + ',' + dropdown_character.charCodeAt(0) + ',';
+  var code = 249 + ',' + dropdown_character.charCodeAt(0) + ',' + pickycolor(colour_color) + ',';
   return code;
 };
 
@@ -46,6 +47,14 @@ Blockly.JavaScript['exp_if_block'] = function(block) {
   var statements_doblocks = Blockly.JavaScript.statementToCode(block, 'doBlocks');
   // TODO: Assemble JavaScript into code variable.
   var code = 254 + ',' + dropdown_action + ',' + statements_doblocks + ',' + 128 + ',';
+  return code;
+};
+
+Blockly.JavaScript['exp_wait'] = function(block) {
+  var dropdown_action = block.getFieldValue('ACTION');
+  var statements_doblocks = Blockly.JavaScript.statementToCode(block, 'doBlocks');
+  // TODO: Assemble JavaScript into code variable.
+  var code = 244 + ',' + dropdown_action + ',' + statements_doblocks + ',' + 128 + ',';
   return code;
 };
 

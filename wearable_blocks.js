@@ -71,7 +71,9 @@ Blockly.Blocks['exp_character'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("show character")
-        .appendField(new Blockly.FieldDropdown([["A","A"], ["B","B"], ["C","C"], ["D","D"], ["E","E"], ["F","F"], ["G","G"], ["H","H"], ["I","I"], ["J","J"], ["K","K"], ["L","L"], ["M","M"], ["N","N"], ["O","O"], ["P","P"], ["Q","Q"], ["R","R"], ["S","S"], ["T","T"], ["U","U"], ["V","V"], ["X","X"], ["Y","Y"], ["Z","Z"]]), "character");
+        .appendField(new Blockly.FieldDropdown([["A","A"], ["B","B"], ["C","C"], ["D","D"], ["E","E"], ["F","F"], ["G","G"], ["H","H"], ["I","I"], ["J","J"], ["K","K"], ["L","L"], ["M","M"], ["N","N"], ["O","O"], ["P","P"], ["Q","Q"], ["R","R"], ["S","S"], ["T","T"], ["U","U"], ["V","V"], ["X","X"], ["Y","Y"], ["Z","Z"]]), "character")
+        .appendField("color")
+        .appendField(new Blockly.FieldColour("#ffffff"), "color");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(160);
@@ -83,12 +85,25 @@ Blockly.Blocks['exp_character'] = {
 Blockly.Blocks['exp_if_block'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("when tilting")
-        .appendField(new Blockly.FieldDropdown([["level (face up)","5"], ["left","3"], ["right","4"], ["forward","1"], ["backward","2"]]), "ACTION");
+        .appendField("when")
+        .appendField(new Blockly.FieldDropdown([["no tilt (face up)","5"], ["tilting left","3"], ["tilting right","4"], ["tilting forward","1"], ["tilting backward","2"]]), "ACTION");
     this.appendStatementInput("doBlocks")
         .setCheck(null);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['exp_wait'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("wait for")
+        .appendField(new Blockly.FieldDropdown([["single tap","6"], ["no tilt (face up)","5"], ["tilting left","3"], ["tilting right","4"], ["tilting forward","1"], ["tilting backward","2"]]), "ACTION");
+    this.appendStatementInput("doBlocks")
+        .setCheck(null);
     this.setColour(230);
  this.setTooltip("");
  this.setHelpUrl("");
