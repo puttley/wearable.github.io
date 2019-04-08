@@ -30,7 +30,7 @@ Blockly.JavaScript['exp_delay'] = function(block) {
 Blockly.JavaScript['exp_show_image'] = function(block) {
   var dropdown_images = block.getFieldValue('images');
   // TODO: Assemble JavaScript into code variable.
-  var code = 247 + ',' + dropdown_images + ',';
+  var code = 247 + ',' + dropdown_images + ',' + 0 + ','; // zero is a dummy
   return code;
 };
 
