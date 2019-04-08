@@ -38,7 +38,7 @@ Blockly.JavaScript['exp_character'] = function(block) {
   var dropdown_character = block.getFieldValue('character');
   var colour_color = block.getFieldValue('color');
   // TODO: Assemble JavaScript into code variable.
-  var code = 249 + ',' + dropdown_character.charCodeAt(0) + ',' + pickycolor(colour_color) + ',';
+  var code = 249 + ',' + dropdown_character.charCodeAt(0) + ',' + pickycolor(colour_color);
   return code;
 };
 
