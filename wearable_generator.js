@@ -72,9 +72,10 @@ Blockly.JavaScript['exp_start'] = function(block) {
 
 Blockly.JavaScript['exp_end'] = function(block) {
   var checkbox_repeat = block.getFieldValue('repeat') == 'TRUE';
-  if(checkbox_repeat == 'true') {var code = '&' + ','; return code;}
-  if(checkbox_repeat == 'false'){var code = '&' + ','; return code;}
-
+  if(checkbox_repeat == 'true') {var repeat = ')' + ',' + 1;}
+  if(checkbox_repeat == 'false'){var repeat = ')' + ',' + 0;}
+  var code = repeat;
+  return code;
 };
 
 Blockly.JavaScript['exp_sound'] = function(block) {
