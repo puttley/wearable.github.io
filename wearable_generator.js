@@ -75,7 +75,7 @@ Blockly.JavaScript['exp_end'] = function(block) {
   if(checkbox_repeat == 'TRUE') {checkbox_repeat = 1;}
   if(checkbox_repeat == 'FALSE'){checkbox_repeat = 0;}
   // TODO: Assemble JavaScript into code variable.
-  var code = ')' + ',' + checkbox_repeat;
+  var code = '&' + ',' + checkbox_repeat;
   return code;
 };
 
