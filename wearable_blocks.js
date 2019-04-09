@@ -127,10 +127,10 @@ Blockly.Blocks['exp_clear_block'] = {
 Blockly.Blocks['exp_start'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"))
-        .appendField("start");
+        .appendField("on start")
+        .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"));
     this.setNextStatement(true, null);
-    this.setColour(20);
+    this.setColour(270);
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -139,12 +139,9 @@ Blockly.Blocks['exp_start'] = {
 Blockly.Blocks['exp_end'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("end")
-        .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"))
-        .appendField("repeat")
-        .appendField(new Blockly.FieldCheckbox("TRUE"), "repeat");
+        .appendField("stop");
     this.setPreviousStatement(true, null);
-    this.setColour(20);
+    this.setColour(270);
  this.setTooltip("");
  this.setHelpUrl("");
   }

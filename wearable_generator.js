@@ -71,10 +71,9 @@ Blockly.JavaScript['exp_start'] = function(block) {
 };
 
 Blockly.JavaScript['exp_end'] = function(block) {
-  var checkbox_repeat = block.getFieldValue('repeat') == 'TRUE';
   // TODO: Assemble JavaScript into code variable.
-  if(checkbox_repeat == 'TRUE') {var code = 1 + ','; return code;}
-  if(checkbox_repeat == 'FALSE'){var code = 0 + ','; return code;}
+  var code = 255;
+  return code;
 };
 
 Blockly.JavaScript['exp_sound'] = function(block) {
