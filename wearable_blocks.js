@@ -34,7 +34,7 @@ Blockly.Blocks['exp_blink'] = {
         .appendField("blink display");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(160);
+    this.setColour(0);
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -61,7 +61,7 @@ Blockly.Blocks['exp_show_image'] = {
         .appendField(new Blockly.FieldDropdown([["heart","150"], ["purple bird","151"], ["smiley face","152"], ["frowny face","153"], ["right arrow","154"], ["left arrow","155"], ["up arrow","156"], ["down arrow","157"]]), "images");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(160);
+    this.setColour(0);
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -76,7 +76,7 @@ Blockly.Blocks['exp_character'] = {
         .appendField(new Blockly.FieldColour("#ffffff"), "color");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(160);
+    this.setColour(0);
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -118,7 +118,7 @@ Blockly.Blocks['exp_clear_block'] = {
         .appendField("clear display");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(160);
+    this.setColour(0);
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -156,7 +156,7 @@ Blockly.Blocks['exp_sound'] = {
         .appendField("until done");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(330);
+    this.setColour(180);
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -180,7 +180,7 @@ Blockly.Blocks['exp_tone'] = {
         .appendField("Hz");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(330);
+    this.setColour(180);
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -196,7 +196,7 @@ Blockly.Blocks['exp_note'] = {
         .appendField("beats");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(330);
+    this.setColour(180);
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -282,7 +282,7 @@ Blockly.Blocks['pixel_matrix'] = {
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(160);
+    this.setColour(0);
  this.setTooltip("");
  this.setHelpUrl("");
   }
