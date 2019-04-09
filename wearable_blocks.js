@@ -128,11 +128,7 @@ Blockly.Blocks['exp_start'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("on start")
-<<<<<<< HEAD
         .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"));
-=======
-        .appendField(new Blockly.FieldImage("\"images/progress.gif\"", 15, 15, "*"));
->>>>>>> 844787d6d852c7e79fce9069222e85d707665706
     this.setNextStatement(true, null);
     this.setColour(270);
  this.setTooltip("");

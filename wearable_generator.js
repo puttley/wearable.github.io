@@ -72,7 +72,7 @@ Blockly.JavaScript['exp_start'] = function(block) {
 
 Blockly.JavaScript['exp_end'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
-  var code = 255;
+  var code = 255 + ',';
   return code;
 };
 
