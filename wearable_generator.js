@@ -58,6 +58,13 @@ Blockly.JavaScript['exp_wait'] = function(block) {
   return code;
 };
 
+Blockly.JavaScript['exp_wait_for'] = function(block) {
+  var dropdown_action = block.getFieldValue('ACTION');
+  // TODO: Assemble JavaScript into code variable.
+  var code = 244 + ',' + dropdown_action + ',';
+  return code;
+};
+
 Blockly.JavaScript['exp_clear_block'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
   var code = 248 + ',';

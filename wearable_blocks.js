@@ -112,6 +112,17 @@ Blockly.Blocks['exp_wait'] = {
   }
 };
 
+Blockly.Blocks['exp_wait_for'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("wait for")
+        .appendField(new Blockly.FieldDropdown([["single tap","6"], ["no tile (face up)","5"], ["tilt left","3"], ["tilt right","4"], ["tilt forward","1"], ["tilt backward","2"]]), "ACTION");
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
 Blockly.Blocks['exp_clear_block'] = {
   init: function() {
     this.appendDummyInput()
