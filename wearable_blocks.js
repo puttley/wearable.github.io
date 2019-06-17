@@ -101,7 +101,7 @@ Blockly.Blocks['exp_wait'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("wait for")
-        .appendField(new Blockly.FieldDropdown([["single tap","6"], ["no tilt (face up)","5"], ["tilting left","3"], ["tilting right","4"], ["tilting forward","1"], ["tilting backward","2"]]), "ACTION");
+        .appendField(new Blockly.FieldDropdown([["shake","6"], ["no tilt (face up)","5"], ["tilting left","3"], ["tilting right","4"], ["tilting forward","1"], ["tilting backward","2"]]), "ACTION");
     this.appendStatementInput("doBlocks")
         .setCheck(null);
     this.setPreviousStatement(true, null);
@@ -116,7 +116,7 @@ Blockly.Blocks['exp_wait_for'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("wait for")
-        .appendField(new Blockly.FieldDropdown([["single tap","6"], ["no tilt (face up)","5"], ["tilt left","3"], ["tilt right","4"], ["tilt forward","1"], ["tilt backward","2"]]), "ACTION");
+        .appendField(new Blockly.FieldDropdown([["shake","6"], ["no tilt (face up)","5"], ["tilt left","3"], ["tilt right","4"], ["tilt forward","1"], ["tilt backward","2"]]), "ACTION");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(230);
