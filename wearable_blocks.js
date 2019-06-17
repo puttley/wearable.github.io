@@ -58,7 +58,7 @@ Blockly.Blocks['exp_show_image'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("show image")
-        .appendField(new Blockly.FieldDropdown([["heart","150"], ["purple bird","151"], ["smiley face","152"], ["frowny face","153"], ["right arrow","154"], ["left arrow","155"], ["up arrow","156"], ["down arrow","157"]]), "images");
+        .appendField(new Blockly.FieldDropdown([["heart","150"], ["purple bird","151"], ["smiley face","152"], ["frowny face","153"], ["cry face","154"], ["twitter","155"], ["crab","156"], ["figure","157"]]), "images");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(0);
