@@ -43,7 +43,7 @@ Blockly.Blocks['exp_blink'] = {
 Blockly.Blocks['exp_delay'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("wait")
+        .appendField("pause")
         .appendField(new Blockly.FieldDropdown([["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"]]), "seconds")
         .appendField("seconds");
     this.setPreviousStatement(true, null);
@@ -117,6 +117,8 @@ Blockly.Blocks['exp_wait_for'] = {
     this.appendDummyInput()
         .appendField("wait for")
         .appendField(new Blockly.FieldDropdown([["single tap","6"], ["no tile (face up)","5"], ["tilt left","3"], ["tilt right","4"], ["tilt forward","1"], ["tilt backward","2"]]), "ACTION");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
     this.setColour(230);
  this.setTooltip("");
  this.setHelpUrl("");
