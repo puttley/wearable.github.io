@@ -32,8 +32,8 @@ Blockly.Blocks['exp_blink'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("blink display");
-    this.setPreviousStatement(true, "ACTION", "NOACTION");
-    this.setNextStatement(true, "ACTION", "NOACTION");
+    this.setPreviousStatement(true, ["ACTION", "NOACTION"]);
+    this.setNextStatement(true, ["ACTION", "NOACTION"]);
     this.setColour(0);
  this.setTooltip("");
  this.setHelpUrl("");
