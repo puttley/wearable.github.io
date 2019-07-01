@@ -20,8 +20,8 @@ Blockly.Blocks['exp_repeat'] = {
     this.appendStatementInput("repeat_loop")
         .setCheck("ACTION");
     this.setInputsInline(true);
-    this.setPreviousStatement(true, "NOACTION");
-    this.setNextStatement(true, "NOACTION");
+    this.setPreviousStatement(true, ["ACTION", "NOACTION"]);
+    this.setNextStatement(true, ["ACTION", "NOACTION"]);
     this.setColour(230);
  this.setTooltip("");
  this.setHelpUrl("");
