@@ -18,10 +18,10 @@ Blockly.Blocks['exp_repeat'] = {
         .appendField("repeat")
         .appendField(new Blockly.FieldDropdown([["1","1"], ["2","2"], ["3","3"]]), "times");
     this.appendStatementInput("repeat_loop")
-        .setCheck(null);
+        .setCheck("ACTION");
     this.setInputsInline(true);
     this.setPreviousStatement(true, "NOACTION");
-    this.setNextStatement(true, null);
+    this.setNextStatement(true, "NOACTION");
     this.setColour(230);
  this.setTooltip("");
  this.setHelpUrl("");
@@ -32,8 +32,8 @@ Blockly.Blocks['exp_blink'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("blink display");
-    this.setPreviousStatement(true, "ACTION");
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, "ACTION", "NOACTION");
+    this.setNextStatement(true, "ACTION", "NOACTION");
     this.setColour(0);
  this.setTooltip("");
  this.setHelpUrl("");
