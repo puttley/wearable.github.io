@@ -20,7 +20,7 @@ Blockly.Blocks['exp_repeat'] = {
     this.appendStatementInput("repeat_loop")
         .setCheck(null);
     this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
+    this.setPreviousStatement(true, NOACTION);
     this.setNextStatement(true, null);
     this.setColour(230);
  this.setTooltip("");
@@ -32,7 +32,7 @@ Blockly.Blocks['exp_blink'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("blink display");
-    this.setPreviousStatement(true, null);
+    this.setPreviousStatement(true, ACTION);
     this.setNextStatement(true, null);
     this.setColour(0);
  this.setTooltip("");
