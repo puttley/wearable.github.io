@@ -749,3 +749,56 @@ Blockly.Blocks['image_logic_if'] = {
  this.setHelpUrl("");
   }
 };
+
+/**
+ * This mixin adds a check to make sure the 'controls_flow_statements' block
+ * is contained in a loop. Otherwise a warning is added to the block.
+ * @mixin
+ * @augments Blockly.Block
+ * @package
+ * @readonly
+ */
+Blockly.Constants.Loops.exp_repeat_IN_LOOP_CHECK_MIXIN = {
+  /**
+   * List of block types that are loops and thus do not need warnings.
+   * To add a new loop type add this to your code:
+   * Blockly.Constants.Loops.CONTROL_FLOW_IN_LOOP_CHECK_MIXIN.LOOP_TYPES.push('custom_loop');
+   */
+  LOOP_TYPES: ['exp_repeat','exp_if_block'],
+
+  /**
+   * Called whenever anything on the workspace changes.
+   * Add warning if this flow block is not nested inside a loop.
+   * @param {!Blockly.Events.Abstract} e Change event.
+   * @this Blockly.Block
+   */
+  onchange: function(/* e */) {
+    if (!this.workspace.isDragging || this.workspace.isDragging()) {
+      return;  // Don't change state at the start of a drag.
+    }
+    var legal = false;
+    // Is the block nested in a loop?
+    var block = this;
+    do {
+      if (this.LOOP_TYPES.indexOf(block.type) != -1) {
+        legal = true;
+        break;
+      }
+      block = block.getSurroundParent();
+    } while (block);
+    if (legal) {
+      this.setWarningText(null);
+      if (!this.isInFlyout) {
+        this.setDisabled(false);
+      }
+    } else {
+      this.setWarningText(Blockly.Msg['CONTROLS_FLOW_STATEMENTS_WARNING']);
+      if (!this.isInFlyout && !this.getInheritedDisabled()) {
+        this.setDisabled(true);
+      }
+    }
+  }
+};
+
+Blockly.Extensions.registerMixin('exp_repeat_in_loop_check',
+    Blockly.Constants.Loops.exp_repeat_IN_LOOP_CHECK_MIXIN);
