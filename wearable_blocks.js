@@ -28,7 +28,7 @@ Blockly.Blocks['exp_repeat'] = {
   },
     onchange: function(ev) {
 
-      console.log(this.newParentId);
+      console.log(this.newInputName);
   //      if (this.getFieldValue('port_number') > '3') {
   //          this.setWarningText('Port must be 0 - 3.');
   //      } else {
