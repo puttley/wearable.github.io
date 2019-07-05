@@ -23,13 +23,14 @@ Blockly.Blocks['exp_repeat'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(230);
+    this.setStyle("repeat");
  this.setTooltip("");
  this.setHelpUrl("");
   },
     onchange: function(ev) {    // disallow nested loops - surround parent not allowed
       if (this.getSurroundParent() != null) {
       this.unplug(true);
-      console.log(this.getRootBlock);
+      console.log(this.getStyleName);
     };
     }
 };
