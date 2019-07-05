@@ -27,12 +27,13 @@ Blockly.Blocks['exp_repeat'] = {
  this.setHelpUrl("");
   },
     onchange: function(ev) {
-    console.log(this.getSurroundParent(Blockly.Block.type));
+//    console.log(this.getSurroundParent(Blockly.Block.type));
 
-//    if (this.getSurroundParent() != null) {
-//      console.log("loop")
-//      this.setDisabled(true);
-//    };
+    if (this.getSurroundParent() != null) {
+      console.log("loop")
+    //  this.setDisabled(true);
+      this.unplug(true);
+    };
 
 
     }
