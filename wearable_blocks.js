@@ -29,7 +29,7 @@ Blockly.Blocks['exp_repeat'] = {
     onchange: function(ev) {    // disallow nested loops - surround parent not allowed
       if (this.getSurroundParent() != null) {
       this.unplug(true);
-      console.log(this.getStyleName);
+      console.log(this.StatementInput);
     };
     }
 };
