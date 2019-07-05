@@ -22,7 +22,7 @@ Blockly.Blocks['exp_repeat'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(230);
+    this.setColour(231);
  this.setTooltip("");
  this.setHelpUrl("");
   },
