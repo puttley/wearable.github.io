@@ -26,9 +26,10 @@ Blockly.Blocks['exp_repeat'] = {
  this.setTooltip("");
  this.setHelpUrl("");
   },
-    onchange: function(ev) {
+    onchange: function(ev) {    // disallow nested loops - surround parent not allowed
       if (this.getSurroundParent() != null) {
       this.unplug(true);
+      console.log(this.getRootBlock);
     };
     }
 };
