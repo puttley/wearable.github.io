@@ -29,7 +29,10 @@ Blockly.Blocks['exp_repeat'] = {
     onchange: function(ev) {
 //    console.log(this.getSurroundParent());
 
-    if (this.getSurroundParent() != null) {console.log("loop")};
+    if (this.getSurroundParent() != null) {
+      console.log("loop")
+      this.setDisabled(true);
+    };
 
   //    console.log(this.blockId);
   //      if (this.getFieldValue('port_number') > '3') {
