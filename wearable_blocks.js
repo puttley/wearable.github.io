@@ -25,8 +25,16 @@ Blockly.Blocks['exp_repeat'] = {
     this.setColour(230);
  this.setTooltip("");
  this.setHelpUrl("");
- console.log(this);
-  }
+  },
+    onchange: function(ev) {
+
+      console.log(this.newParentId);
+  //      if (this.getFieldValue('port_number') > '3') {
+  //          this.setWarningText('Port must be 0 - 3.');
+  //      } else {
+  //          this.setWarningText(null);
+  //      }
+    }
 };
 
 Blockly.Blocks['exp_blink'] = {
