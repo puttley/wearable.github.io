@@ -27,7 +27,9 @@ Blockly.Blocks['exp_repeat'] = {
  this.setHelpUrl("");
   },
     onchange: function(ev) {
-    console.log(this.getSurroundParent(LOOP_TYPES));
+//    console.log(this.getSurroundParent());
+
+    if (this.getSurroundParent() != -1) {console.log("loop")};
 
   //    console.log(this.blockId);
   //      if (this.getFieldValue('port_number') > '3') {
