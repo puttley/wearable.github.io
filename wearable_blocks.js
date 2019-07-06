@@ -27,12 +27,13 @@ Blockly.Blocks['exp_repeat'] = {
  this.setHelpUrl("");
   },
     onchange: function(ev) {    // disallow nested loops - surround parent not allowed
-      if (this.getSurroundParent() != null) {
+  //    if (this.getSurroundParent() != null) {
+  //    var block = this.getSurroundParent();
+  //    console.log(block.type);
+  //    this.unplug(true);
+  //  };
       var block = this.getSurroundParent();
-      console.log(block.type);
-      this.unplug(true);
-
-    };
+      if(block.type == "exp_repeat") {this.unplug(true);}
     }
 };
 
