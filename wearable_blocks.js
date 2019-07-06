@@ -27,18 +27,9 @@ Blockly.Blocks['exp_repeat'] = {
  this.setHelpUrl("");
   },
   onchange: function(ev) {    // disallow nested loops - surround parent of 'x' type not allowed
-  //    if (this.getSurroundParent() != null) {
-  //    var block = this.getSurroundParent();
-  //    console.log(block.type);
-  //    this.unplug(true);
-  //  };
-  this.setDisabled(false);
-  if (this.getSurroundParent() != null) {
+    if (this.getSurroundParent() != null) {
       var block = this.getSurroundParent();
-      console.log(block.type);
-  //  if(block.type == 'exp_repeat') {this.unplug(false);}
-
-      if(block.type == 'exp_repeat') {this.setDisabled(true);}
+      if(block.type == 'exp_repeat') {this.unplug(true);}
     };
   }
 };
@@ -111,16 +102,10 @@ Blockly.Blocks['exp_if_block'] = {
  this.setHelpUrl("");
  },
 onchange: function(ev) {    // disallow nested loops - surround parent of 'x' type not allowed
-//    if (this.getSurroundParent() != null) {
-//    var block = this.getSurroundParent();
-//    console.log(block.type);
-//    this.unplug(true);
-//  };
-if (this.getSurroundParent() != null) {
-  var block = this.getSurroundParent();
-  console.log(block.type);
-  if(block.type == 'exp_if_block') {this.unplug(true);}
-  if(block.type == 'exp_repeat') {this.unplug(true);}
+ if (this.getSurroundParent() != null) {
+   var block = this.getSurroundParent();
+   if(block.type == 'exp_if_block') {this.unplug(true);}
+   if(block.type == 'exp_repeat') {this.unplug(true);}
   };
  }
 };
