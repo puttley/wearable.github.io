@@ -33,7 +33,7 @@ Blockly.Blocks['exp_repeat'] = {
   //    this.unplug(true);
   //  };
       var block = this.getSurroundParent();
-      if(block.type == "exp_repeat") {this.unplug(true);}
+      if(block.type == 'exp_repeat') {this.unplug(true);};
     }
 };
 
