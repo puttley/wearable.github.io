@@ -22,7 +22,7 @@ Blockly.Blocks['exp_repeat'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(231);
+    this.setColour(230);
  this.setTooltip("");
  this.setHelpUrl("");
   },
@@ -34,10 +34,10 @@ Blockly.Blocks['exp_repeat'] = {
   //  };
   if (this.getSurroundParent() != null) {
       var block = this.getSurroundParent();
-      var type = block.type;
-      console.log(type);
-      this.unplug(true);
-  //    if(block.type == 'exp_repeat') {this.unplug(true);}
+
+      console.log(block.type);
+
+      if(block.type == 'exp_repeat') {this.unplug(true);}
 };
     }
 };
