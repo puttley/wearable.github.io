@@ -91,8 +91,8 @@ Blockly.Blocks['exp_character'] = {
 Blockly.Blocks['exp_if_block'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("if Code Cube")
-        .appendField(new Blockly.FieldDropdown([["no tilt (face up)","5"], ["tilting left","3"], ["tilting right","4"], ["tilting forward","1"], ["tilting backward","2"]]), "ACTION");
+        .appendField("if CODE CUBE")
+        .appendField(new Blockly.FieldDropdown([["no tilt (face up)","5"], ["tilting left","3"], ["tilting right","4"], ["tilting forward","1"], ["tilting backward","2"]]), "ACTION")
         .appendField("then");
     this.appendDummyInput();
     this.appendStatementInput("doBlocks")
