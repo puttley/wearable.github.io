@@ -35,7 +35,8 @@ Blockly.Blocks['exp_repeat'] = {
   if (this.getSurroundParent() != null) {
       var block = this.getSurroundParent();
       console.log(block.type);
-      if(block.type == 'exp_repeat') {this.unplug(false);}
+  //  if(block.type == 'exp_repeat') {this.unplug(false);}
+      if(block.type == 'exp_repeat') {this.setDisabled(true);}
     };
   }
 };
