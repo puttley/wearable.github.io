@@ -117,6 +117,7 @@ if (this.getSurroundParent() != null) {
   var block = this.getSurroundParent();
   console.log(block.type);
   if(block.type == 'exp_if_block') {this.unplug(true);}
+  if(block.type == 'exp_repeat') {this.unplug(true);}
   };
  }
 };
