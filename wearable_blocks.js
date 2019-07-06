@@ -94,8 +94,9 @@ Blockly.Blocks['exp_if_block'] = {
         .appendField("if Code Cube")
         .appendField(new Blockly.FieldDropdown([["no tilt (face up)","5"], ["tilting left","3"], ["tilting right","4"], ["tilting forward","1"], ["tilting backward","2"]]), "ACTION");
         .appendField("then");
+    this.appendDummyInput();
     this.appendStatementInput("doBlocks")
-        .setCheck(null);
+        .setCheck(null)
         .appendField("do this");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
