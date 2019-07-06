@@ -29,7 +29,7 @@ Blockly.Blocks['exp_repeat'] = {
     onchange: function(ev) {    // disallow nested loops - surround parent not allowed
       if (this.getSurroundParent() != null) {
       var block = this.getSurroundParent();
-      console.log(block);
+      console.log(block.type);
       this.unplug(true);
 
     };
