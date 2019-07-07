@@ -100,7 +100,7 @@ Blockly.Blocks['exp_if_block'] = {
         .appendField("do this");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("FFC400");
+    this.setColour("#FFC400");
  this.setTooltip("");
  this.setHelpUrl("");
  },
