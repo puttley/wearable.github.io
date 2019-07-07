@@ -40,7 +40,7 @@ Blockly.Blocks['exp_blink'] = {
         .appendField("blink display");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#43A047");
+    this.setColour("#009688");
  this.setTooltip("");
  this.setHelpUrl("");
   }
