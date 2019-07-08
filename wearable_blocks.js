@@ -113,6 +113,19 @@ onchange: function(ev) {    // disallow nested loops - surround parent of 'x' ty
  }
 };
 
+Blockly.Blocks['exp_tilt'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("CODE CUBE tilts")
+        .appendField(new Blockly.FieldDropdown([["any","7"], ["front","1"], ["back","2"], ["left","3"], ["right","4"], ["up","5"], ["down","6"]]), "tilt")
+        .appendField("?");
+    this.setOutput(true, null);
+    this.setColour(270);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
 Blockly.Blocks['exp_wait'] = {
   init: function() {
     this.appendDummyInput()
