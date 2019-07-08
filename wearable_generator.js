@@ -7,10 +7,10 @@ Blockly.JavaScript['serial_data'] = function(block) {
 };
 
 Blockly.JavaScript['exp_repeat'] = function(block) {
-  var dropdown_times = block.getFieldValue('times');
+  var number_repeat = block.getFieldValue('repeat');
   var statements_repeat_loop = Blockly.JavaScript.statementToCode(block, 'repeat_loop');
   // TODO: Assemble JavaScript into code variable.
-  var code = 253 + ',' + dropdown_times + ',' + statements_repeat_loop + ',' + 127 + ',';
+  var code = 253 + ',' + number_repeat + ',' + statements_repeat_loop + ',' + 127 + ',';
   return code;
 };
 

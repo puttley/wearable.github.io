@@ -16,13 +16,13 @@ Blockly.Blocks['exp_repeat'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("repeat")
-        .appendField(new Blockly.FieldDropdown([["1","1"], ["2","2"], ["3","3"]]), "times");
+        .appendField(new Blockly.FieldNumber(5, 1, 99, 1), "repeat");
     this.appendStatementInput("repeat_loop")
         .setCheck(null);
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(230);
+    this.setColour("#FFAB00");
  this.setTooltip("");
  this.setHelpUrl("");
   },
