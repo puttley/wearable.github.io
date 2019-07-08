@@ -197,7 +197,7 @@ Blockly.Blocks['exp_sound'] = {
         .appendField("until done");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(180);
+    this.setColour("7986CB");
  this.setTooltip("");
  this.setHelpUrl("");
   }
