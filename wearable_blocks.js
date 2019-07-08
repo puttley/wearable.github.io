@@ -90,19 +90,19 @@ Blockly.Blocks['exp_character'] = {
 
 Blockly.Blocks['exp_if_block'] = {
   init: function() {
-    this.appendDummyInput()
-        .appendField("if CODE CUBE")
-        .appendField(new Blockly.FieldDropdown([["no tilt (face up)","5"], ["tilting left","3"], ["tilting right","4"], ["tilting forward","1"], ["tilting backward","2"]]), "ACTION")
-        .appendField("then");
-    this.appendDummyInput();
-    this.appendStatementInput("doBlocks")
-        .setCheck(null)
-        .appendField("do this");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour("#FFAB00");
- this.setTooltip("");
- this.setHelpUrl("");
+  this.appendValueInput("if")
+      .setCheck(null)
+      .appendField("if");
+  this.appendDummyInput()
+      .appendField("then");
+  this.appendStatementInput("doBlocks")
+      .setCheck(null);
+  this.setInputsInline(false);
+  this.setPreviousStatement(true, null);
+  this.setNextStatement(true, null);
+  this.setColour("#FFAB00");
+this.setTooltip("");
+this.setHelpUrl("");
  },
 onchange: function(ev) {    // disallow nested loops - surround parent of 'x' type not allowed
  if (this.getSurroundParent() != null) {

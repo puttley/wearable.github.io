@@ -43,10 +43,10 @@ Blockly.JavaScript['exp_character'] = function(block) {
 };
 
 Blockly.JavaScript['exp_if_block'] = function(block) {
-  var dropdown_action = block.getFieldValue('ACTION');
+  var value_if = Blockly.JavaScript.valueToCode(block, 'if', Blockly.JavaScript.ORDER_ATOMIC);
   var statements_doblocks = Blockly.JavaScript.statementToCode(block, 'doBlocks');
   // TODO: Assemble JavaScript into code variable.
-  var code = 254 + ',' + dropdown_action + ',' + statements_doblocks + ',' + 128 + ',';
+  var code = 254 + ',' + value_if + ',' + statements_doblocks + ',' + 128 + ',';
   return code;
 };
 
