@@ -328,7 +328,7 @@ Blockly.Blocks['pixel_matrix'] = {
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#5E35B1");
+    this.setColour("#A1887F");
  this.setTooltip("");
  this.setHelpUrl("");
   }
