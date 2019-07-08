@@ -40,7 +40,7 @@ Blockly.Blocks['exp_blink'] = {
         .appendField("blink display");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#5E35B1");
+    this.setColour("#7E57C2");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -53,7 +53,7 @@ Blockly.Blocks['exp_show_image'] = {
         .appendField(new Blockly.FieldDropdown([["heart","150"], ["purple bird","151"], ["smiley face","152"], ["frowny face","153"], ["cry face","154"], ["twitter","155"], ["crab","156"], ["figure","157"]]), "images");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#5E35B1");
+    this.setColour("#7E57C2");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -159,7 +159,7 @@ Blockly.Blocks['exp_clear_block'] = {
         .appendField("clear display");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#5E35B1");
+    this.setColour("#7E57C2");
  this.setTooltip("");
  this.setHelpUrl("");
   }
