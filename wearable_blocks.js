@@ -68,7 +68,7 @@ Blockly.Blocks['exp_character'] = {
         .appendField(new Blockly.FieldColour("#ffffff"), "color");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#5E35B1");
+    this.setColour("#7E57C2");
  this.setTooltip("");
  this.setHelpUrl("");
   }
