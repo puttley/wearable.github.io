@@ -97,9 +97,9 @@ Blockly.JavaScript['exp_sound'] = function(block) {
 };
 
 Blockly.JavaScript['exp_tone'] = function(block) {
-  var text_hz = block.getFieldValue('hz');
+  var number_hz = block.getFieldValue('hz');
   // TODO: Assemble JavaScript into code variable.
-  var code = 246 + ',' + (text_hz / 10) + ',';
+  var code = 246 + ',' + (number_hz / 10) + ',';
   return code;
 };
 

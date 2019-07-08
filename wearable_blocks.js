@@ -217,11 +217,11 @@ Blockly.Blocks['exp_tone'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("play tone")
-        .appendField(new Blockly.FieldTextInput("1000"), "hz")
+        .appendField(new Blockly.FieldNumber(1000, 100, 2500, 1), "hz")
         .appendField("Hz");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(180);
+    this.setColour("#EC407A");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -242,7 +242,7 @@ Blockly.Blocks['exp_note'] = {
         .appendField("beats");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(180);
+    this.setColour("#EC407A");
  this.setTooltip("");
  this.setHelpUrl("");
   }
