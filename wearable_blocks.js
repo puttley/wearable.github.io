@@ -46,20 +46,6 @@ Blockly.Blocks['exp_blink'] = {
   }
 };
 
-Blockly.Blocks['exp_delay'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField("pause")
-        .appendField(new Blockly.FieldDropdown([["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"]]), "seconds")
-        .appendField("seconds");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour("#AA00FF");
- this.setTooltip("");
- this.setHelpUrl("");
-  }
-};
-
 Blockly.Blocks['exp_show_image'] = {
   init: function() {
     this.appendDummyInput()
@@ -119,7 +105,21 @@ Blockly.Blocks['exp_tilt'] = {
         .appendField("CODE CUBE tilts")
         .appendField(new Blockly.FieldDropdown([["any","7"], ["front","1"], ["back","2"], ["left","3"], ["right","4"], ["up","5"], ["down","6"]]), "tilt")
     this.setOutput(true, null);
-    this.setColour("#448AFF");
+    this.setColour("#0D47A1");
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['exp_delay'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("pause")
+        .appendField(new Blockly.FieldDropdown([["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"]]), "seconds")
+        .appendField("seconds");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#4A148C");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -134,7 +134,7 @@ Blockly.Blocks['exp_wait'] = {
         .setCheck(null);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#AA00FF");
+    this.setColour("#4A148C");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -147,7 +147,7 @@ Blockly.Blocks['exp_wait_for'] = {
         .appendField("wait until");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#AA00FF");
+    this.setColour("#4A148C");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -172,7 +172,7 @@ Blockly.Blocks['exp_start'] = {
     //    .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"));
         .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"));
     this.setNextStatement(true, null);
-    this.setColour("#D50000");
+    this.setColour("#B71C1C");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -183,7 +183,7 @@ Blockly.Blocks['exp_end'] = {
     this.appendDummyInput()
         .appendField("stop");
     this.setPreviousStatement(true, null);
-    this.setColour("#D50000");
+    this.setColour("#B71C1C");
  this.setTooltip("");
  this.setHelpUrl("");
   }
