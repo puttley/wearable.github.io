@@ -172,7 +172,7 @@ Blockly.Blocks['exp_start'] = {
     //    .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"));
         .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"));
     this.setNextStatement(true, null);
-    this.setColour("#2E7D32");
+    this.setColour("#455A64");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -183,7 +183,7 @@ Blockly.Blocks['exp_end'] = {
     this.appendDummyInput()
         .appendField("stop");
     this.setPreviousStatement(true, null);
-    this.setColour("#2E7D32");
+    this.setColour("#455A64");
  this.setTooltip("");
  this.setHelpUrl("");
   }
