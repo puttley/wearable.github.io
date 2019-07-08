@@ -104,7 +104,7 @@ function discard() {
   var count = Blockly.mainWorkspace.getAllBlocks().length;
   if (count < 2 || window.confirm('Delete all ' + count + ' blocks?')) {
     Blockly.mainWorkspace.clear();
-    var xml = '<xml><block type="frame_strip_15" deletable="true" movable="true"></block></xml>';  // add default block back
+    var xml = '<xml><block type="exp_start" deletable="true" movable="true"></block></xml>';  // add default block back
     Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(xml), workspace);
     renderContent();
 
