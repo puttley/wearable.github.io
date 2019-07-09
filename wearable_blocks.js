@@ -159,7 +159,7 @@ Blockly.Blocks['exp_clear_block'] = {
         .appendField("clear display");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#7E57C2");
+    this.setColour("#BA68C8");
  this.setTooltip("");
  this.setHelpUrl("");
   }
