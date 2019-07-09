@@ -103,7 +103,7 @@ Blockly.Blocks['exp_tilt'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("CODE CUBE tilts")
-        .appendField(new Blockly.FieldDropdown([["left","3"], ["right","4"], ["front","1"], ["back","2"]]), "tilt")
+        .appendField(new Blockly.FieldDropdown([["left","3"], ["right","4"], ["front","1"], ["back","2"]]), "tilt");
     this.setOutput(true, null);
     this.setColour("#009688");
  this.setTooltip("");
@@ -115,7 +115,7 @@ Blockly.Blocks['exp_is'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("CODE CUBE display is")
-        .appendField(new Blockly.FieldDropdown([["face up","5"], ["face down","6"], ["",""]]), "is")
+        .appendField(new Blockly.FieldDropdown([["face up","5"], ["face down","6"], ["",""]]), "is");
     this.setOutput(true, null);
     this.setColour("#009688");
  this.setTooltip("");
