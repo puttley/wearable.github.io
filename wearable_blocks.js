@@ -197,7 +197,7 @@ Blockly.Blocks['exp_sound'] = {
         .appendField("until done");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#EC407A");
+    this.setColour("#F06292");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -221,7 +221,7 @@ Blockly.Blocks['exp_tone'] = {
         .appendField("Hz");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#EC407A");
+    this.setColour("#F06292");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -242,7 +242,7 @@ Blockly.Blocks['exp_note'] = {
         .appendField("beats");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#EC407A");
+    this.setColour("#F06292");
  this.setTooltip("");
  this.setHelpUrl("");
   }
