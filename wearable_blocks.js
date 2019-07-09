@@ -128,13 +128,13 @@ Blockly.Blocks['exp_delay'] = {
     this.appendDummyInput()
         .appendField("pause")
         .appendField(new Blockly.FieldDropdown([["0.25","25"], ["0.5","50"], ["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"], ["6","6"], ["7","7"], ["8","8"], ["9","9"], ["10","10"]]), "seconds")
-        .setFieldValue('1')
         .appendField("seconds");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#0288D1");
  this.setTooltip("");
  this.setHelpUrl("");
+ this.setFieldValue('1', 'seconds');
 
   }
 };
