@@ -107,7 +107,7 @@ Blockly.JavaScript['exp_tone'] = function(block) {
   var number_hz = block.getFieldValue('hz');
   var dropdown_duration = block.getFieldValue('duration');
   // TODO: Assemble JavaScript into code variable.
-  var code = 243 + ',' + (number_hz / 10) + ',' + dropdown_duration + ',';
+  var code = 243 + ',' + integer((number_hz / 10)) + ',' + dropdown_duration + ',';
   return code;
 };
 
