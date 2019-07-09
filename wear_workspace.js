@@ -34,6 +34,12 @@ var options = {
 //var xml = '<xml><block type="frame_strip_15" deletable="true" movable="true"></block></xml>';
 //Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(xml), workspace);
 
+// Load up the exp_start block when hitting the URL
+Blockly.mainWorkspace.clear();
+var xml = '<xml><block type="exp_start" deletable="true" movable="true"></block></xml>';  // add default block back
+Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(xml), workspace);
+renderContent();
+
 /* TODO: Change workspace blocks XML ID if necessary. Can export workspace blocks XML from Workspace Factory. */
 var workspaceBlocks = document.getElementById("workspaceBlocks");
 
