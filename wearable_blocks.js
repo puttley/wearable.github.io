@@ -127,7 +127,7 @@ Blockly.Blocks['exp_delay'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("pause")
-        .appendField(new Blockly.FieldDropdown([["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"]]), "seconds")
+        .appendField(new Blockly.FieldDropdown([["0.25","25"], ["0.5","50"], ["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"], ["6","6"], ["7","7"], ["8","8"], ["9","9"], ["10","10"]]), "seconds")
         .appendField("seconds");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -231,6 +231,9 @@ Blockly.Blocks['exp_tone'] = {
         .appendField("play tone")
         .appendField(new Blockly.FieldNumber(1000, 100, 2500, 1), "hz")
         .appendField("Hz");
+        .appendField("for")
+        .appendField(new Blockly.FieldDropdown([["0.25","25"], ["0.5","50"], ["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"]]), "duration")
+        .appendField("seconds");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#F06292");
@@ -251,7 +254,7 @@ Blockly.Blocks['exp_note'] = {
                                                ["G#6","45"], ["A6","46"], ["A#6","47"], ["B6","48"], ["C7","49"]]), "sounds")
         .appendField("for")
         .appendField(new Blockly.FieldDropdown([["0.25","25"], ["0.5","50"], ["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"]]), "duration")
-        .appendField("beats");
+        .appendField("seconds");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#F06292");
