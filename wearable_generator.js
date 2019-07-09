@@ -57,6 +57,13 @@ Blockly.JavaScript['exp_tilt'] = function(block) {
   return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+Blockly.JavaScript['exp_is'] = function(block) {
+  var dropdown_is = block.getFieldValue('is');
+  var code = dropdown_is + ',';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
 Blockly.JavaScript['exp_wait'] = function(block) {
   var dropdown_action = block.getFieldValue('ACTION');
   var statements_doblocks = Blockly.JavaScript.statementToCode(block, 'doBlocks');
