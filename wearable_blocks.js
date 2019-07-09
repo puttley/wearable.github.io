@@ -230,7 +230,7 @@ Blockly.Blocks['exp_tone'] = {
     this.appendDummyInput()
         .appendField("play tone")
         .appendField(new Blockly.FieldNumber(1000, 100, 2500, 1), "hz")
-        .appendField("Hz");
+        .appendField("Hz")
         .appendField("for")
         .appendField(new Blockly.FieldDropdown([["0.25","25"], ["0.5","50"], ["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"]]), "duration")
         .appendField("seconds");
