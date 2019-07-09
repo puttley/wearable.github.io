@@ -40,7 +40,7 @@ Blockly.Blocks['exp_blink'] = {
         .appendField("blink display");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#7E57C2");
+    this.setColour("#BA68C8");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -53,7 +53,7 @@ Blockly.Blocks['exp_show_image'] = {
         .appendField(new Blockly.FieldDropdown([["heart","150"], ["purple bird","151"], ["smiley face","152"], ["frowny face","153"], ["cry face","154"], ["twitter","155"], ["crab","156"], ["figure","157"]]), "images");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#7E57C2");
+    this.setColour("#BA68C8");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -68,7 +68,7 @@ Blockly.Blocks['exp_character'] = {
         .appendField(new Blockly.FieldColour("#ffffff"), "color");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#7E57C2");
+    this.setColour("#BA68C8");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -105,7 +105,7 @@ Blockly.Blocks['exp_tilt'] = {
         .appendField("CODE CUBE tilts")
         .appendField(new Blockly.FieldDropdown([["any","7"], ["front","1"], ["back","2"], ["left","3"], ["right","4"], ["up","5"], ["down","6"]]), "tilt")
     this.setOutput(true, null);
-    this.setColour("#00796B");
+    this.setColour("#009688");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -172,7 +172,7 @@ Blockly.Blocks['exp_start'] = {
     //    .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"));
         .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"));
     this.setNextStatement(true, null);
-    this.setColour("#455A64");
+    this.setColour("#607D8B");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -183,7 +183,7 @@ Blockly.Blocks['exp_end'] = {
     this.appendDummyInput()
         .appendField("stop");
     this.setPreviousStatement(true, null);
-    this.setColour("#455A64");
+    this.setColour("#607D8B");
  this.setTooltip("");
  this.setHelpUrl("");
   }
