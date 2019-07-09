@@ -134,7 +134,7 @@ Blockly.Blocks['exp_delay'] = {
     this.setColour("#0288D1");
  this.setTooltip("");
  this.setHelpUrl("");
- this.setFieldValue('1');
+ this.seconds.setFieldValue('1');
   }
 };
 
