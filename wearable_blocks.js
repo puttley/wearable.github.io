@@ -240,7 +240,7 @@ Blockly.Blocks['exp_tone'] = {
     this.setColour("#F06292");
  this.setTooltip("");
  this.setHelpUrl("");
- this.setFieldValue(1, duration);  // default check mark is 1 second
+ //this.setFieldValue(1, duration);  // default check mark is 1 second
   }
 };
 
@@ -262,7 +262,7 @@ Blockly.Blocks['exp_note'] = {
     this.setColour("#F06292");
  this.setTooltip("");
  this.setHelpUrl("");
- this.setFieldValue(1, duration);  // default check mark is 1 second
+ //this.setFieldValue(1, duration);  // default check mark is 1 second
   }
 };
 
