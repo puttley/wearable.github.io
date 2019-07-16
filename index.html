@@ -52,9 +52,9 @@
     </div>
 
     <form id="form">
-<!--    <p>Message:</p>
+    <p>Message:</p>
         <input type="text" id="text" autofocus required autocapitalize maxlength="100">
-        <input type="submit" value="send"> -->
+        <input type="submit" value="send">
 
     </form>
     </section>
@@ -178,12 +178,7 @@
   //      Blockly.Xml.domToWorkspace(document.getElementById('startBlocks'),
   //                               demoWorkspace);
 
-  serial.port.onReceive = data => {
-    let textDecoder = new TextDecoder();
-    text.value = textDecoder.decode(data).trim();
-    console.log(text.value);
-    clearInterval(timer);
-  };
+  
 
     function importCode(){
       var xml_text = localStorage.getItem("myfile");
