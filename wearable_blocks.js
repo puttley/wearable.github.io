@@ -12,6 +12,8 @@ Blockly.Blocks['serial_data'] = {
   }
 };
 
+
+
 Blockly.Blocks['exp_repeat'] = {
   init: function() {
     this.appendDummyInput()
@@ -83,7 +85,7 @@ Blockly.Blocks['exp_if_block'] = {
       .appendField("then");
   this.appendStatementInput("doBlocks")
       .setCheck(null);
-  this.setInputsInline(false);
+  this.setInputsInline(true);
   this.setPreviousStatement(true, null);
   this.setNextStatement(true, null);
   this.setColour("#FF8F00");
@@ -97,6 +99,60 @@ onchange: function(ev) {    // disallow nested loops - surround parent of 'x' ty
    if(block.type == 'exp_repeat') {this.unplug(true);}
   };
  }
+};
+
+Blockly.Blocks['cube_if_else'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("if");
+    this.appendValueInput("condition")
+        .setCheck(null);
+    this.appendDummyInput()
+        .appendField("then");
+    this.appendStatementInput("then")
+        .setCheck(null);
+    this.appendDummyInput()
+        .appendField("else");
+    this.appendStatementInput("else")
+        .setCheck(null);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#FF8F00");
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['cube_loop_until'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("loop until");
+    this.appendValueInput("condition")
+        .setCheck(null);
+    this.appendStatementInput("until")
+        .setCheck(null);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#FF8F00");
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['cube_loop_forever'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("loop forever");
+    this.appendStatementInput("NAME")
+        .setCheck(null);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#FF8F00");
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
 };
 
 Blockly.Blocks['exp_tilt'] = {
@@ -126,12 +182,12 @@ Blockly.Blocks['exp_is'] = {
 Blockly.Blocks['exp_delay'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("pause")
+        .appendField("pause for")
         .appendField(new Blockly.FieldDropdown([["0.25","25"], ["0.5","50"], ["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"], ["6","6"], ["7","7"], ["8","8"], ["9","9"], ["10","10"]]), "seconds")
         .appendField("seconds");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#0288D1");
+    this.setColour("#FF8F00");
  this.setTooltip("");
  this.setHelpUrl("");
  this.setFieldValue("1", "seconds");  // default check mark is 1 second
@@ -148,6 +204,21 @@ Blockly.Blocks['exp_wait'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#0288D1");
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['cube_wait_until'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("wait until");
+    this.appendValueInput("tilt")
+        .setCheck(null);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#FF8F00");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -181,11 +252,11 @@ Blockly.Blocks['exp_clear_block'] = {
 Blockly.Blocks['exp_start'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("on start")
+        .appendField("start program")
     //    .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"));
         .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"));
     this.setNextStatement(true, null);
-    this.setColour("#607D8B");
+    this.setColour("#FF8F00");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -194,9 +265,9 @@ Blockly.Blocks['exp_start'] = {
 Blockly.Blocks['exp_end'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("stop");
+        .appendField("end program");
     this.setPreviousStatement(true, null);
-    this.setColour("#607D8B");
+    this.setColour("#FF8F00");
  this.setTooltip("");
  this.setHelpUrl("");
   }

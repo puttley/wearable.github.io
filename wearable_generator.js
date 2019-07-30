@@ -50,6 +50,15 @@ Blockly.JavaScript['exp_if_block'] = function(block) {
   return code;
 };
 
+Blockly.JavaScript['cube_if_else'] = function(block) {
+  var value_condition = Blockly.JavaScript.valueToCode(block, 'condition', Blockly.JavaScript.ORDER_ATOMIC);
+  var statements_then = Blockly.JavaScript.statementToCode(block, 'then');
+  var statements_else = Blockly.JavaScript.statementToCode(block, 'else');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...;\n';
+  return code;
+};
+
 Blockly.JavaScript['exp_tilt'] = function(block) {
   var dropdown_tilt = block.getFieldValue('tilt');
   var code = dropdown_tilt + ',';
@@ -75,6 +84,20 @@ Blockly.JavaScript['exp_wait'] = function(block) {
 Blockly.JavaScript['exp_wait_for'] = function(block) {
   var value_tilt = Blockly.JavaScript.valueToCode(block, 'tilt', Blockly.JavaScript.ORDER_ATOMIC);
   var code = 244 + ',' + value_tilt + ',';
+  return code;
+};
+
+Blockly.JavaScript['cube_wait_until'] = function(block) {
+  var value_tilt = Blockly.JavaScript.valueToCode(block, 'tilt', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = 244 + ',' + value_tilt + ',';
+  return code;
+};
+
+Blockly.JavaScript['cube_loop_forever'] = function(block) {
+  var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...;\n';
   return code;
 };
 
