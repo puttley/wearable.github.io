@@ -12,19 +12,19 @@ Blockly.Blocks['serial_data'] = {
   }
 };
 
-
-
 Blockly.Blocks['exp_repeat'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("repeat")
         .appendField(new Blockly.FieldNumber(5, 1, 99, 1), "repeat");
+    this.appendDummyInput()
+        .appendField("times");
     this.appendStatementInput("repeat_loop")
         .setCheck(null);
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#FF8F00");
+    this.setColour("#5C6BC0");
  this.setTooltip("");
  this.setHelpUrl("");
   },
@@ -88,7 +88,7 @@ Blockly.Blocks['exp_if_block'] = {
   this.setInputsInline(true);
   this.setPreviousStatement(true, null);
   this.setNextStatement(true, null);
-  this.setColour("#FF8F00");
+  this.setColour("#5C6BC0");
 this.setTooltip("");
 this.setHelpUrl("");
  },
@@ -118,7 +118,7 @@ Blockly.Blocks['cube_if_else'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#FF8F00");
+    this.setColour("#5C6BC0");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -149,7 +149,7 @@ Blockly.Blocks['cube_loop_forever'] = {
         .setCheck(null);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#7986CB");
+    this.setColour("#5C6BC0");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -187,7 +187,7 @@ Blockly.Blocks['exp_delay'] = {
         .appendField("seconds");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#FF8F00");
+    this.setColour("#5C6BC0");
  this.setTooltip("");
  this.setHelpUrl("");
  this.setFieldValue("1", "seconds");  // default check mark is 1 second
@@ -218,7 +218,7 @@ Blockly.Blocks['cube_wait_until'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#FF8F00");
+    this.setColour("#5C6BC0");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -256,7 +256,7 @@ Blockly.Blocks['exp_start'] = {
     //    .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"));
         .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"));
     this.setNextStatement(true, null);
-    this.setColour("#FF8F00");
+    this.setColour("#5C6BC0");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -267,7 +267,7 @@ Blockly.Blocks['exp_end'] = {
     this.appendDummyInput()
         .appendField("end program");
     this.setPreviousStatement(true, null);
-    this.setColour("#FF8F00");
+    this.setColour("#5C6BC0");
  this.setTooltip("");
  this.setHelpUrl("");
   }
