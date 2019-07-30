@@ -330,7 +330,7 @@ Blockly.Blocks['exp_note'] = {
         .appendField("seconds");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#D81B60");
+    this.setColour("#880061");
  this.setTooltip("");
  this.setHelpUrl("");
  this.setFieldValue("1", "duration");  // default check mark is 1 second
