@@ -281,7 +281,7 @@ Blockly.Blocks['exp_sound'] = {
         .appendField("until done");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#F06292");
+    this.setColour("#AD1457");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -308,7 +308,7 @@ Blockly.Blocks['exp_tone'] = {
         .appendField("seconds");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#F06292");
+    this.setColour("#AD1457");
  this.setTooltip("");
  this.setHelpUrl("");
  this.setFieldValue("1", "duration");  // default check mark is 1 second
@@ -330,7 +330,7 @@ Blockly.Blocks['exp_note'] = {
         .appendField("seconds");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#F06292");
+    this.setColour("#AD1457");
  this.setTooltip("");
  this.setHelpUrl("");
  this.setFieldValue("1", "duration");  // default check mark is 1 second
