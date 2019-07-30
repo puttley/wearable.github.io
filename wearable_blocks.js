@@ -149,7 +149,7 @@ Blockly.Blocks['cube_loop_forever'] = {
         .setCheck(null);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#7E57C2");
+    this.setColour("#5C6BC0");
  this.setTooltip("");
  this.setHelpUrl("");
   }
