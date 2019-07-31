@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			connectButton.innerHTML = '<b>&times;</b> disconnect';
 
 			device.innerHTML = `&#x2714; Connected with ${port.device_.productName}.`;
+			device.textContent = 'Connected with Codeable Wearable';
 			main.classList.remove('error');
 
 			port.onReceive = data => {
