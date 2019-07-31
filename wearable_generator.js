@@ -6,6 +6,75 @@ Blockly.JavaScript['serial_data'] = function(block) {
   return code;
 };
 
+Blockly.JavaScript['matrix_scroll'] = function(block) {
+  var dropdown_name = block.getFieldValue('NAME');
+  var dropdown_speed = block.getFieldValue('speed');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...;\n';
+  return code;
+};
+
+Blockly.JavaScript['matrix_fill'] = function(block) {
+  var colour_color = block.getFieldValue('color');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...;\n';
+  return code;
+};
+
+Blockly.JavaScript['matrix_fade'] = function(block) {
+  var colour_color = block.getFieldValue('color');
+  var dropdown_seconds = block.getFieldValue('seconds');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...;\n';
+  return code;
+};
+
+Blockly.JavaScript['matrix_strobe'] = function(block) {
+  var colour_color = block.getFieldValue('color');
+  var number_seconds = block.getFieldValue('seconds');
+  var number_times = block.getFieldValue('times');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...;\n';
+  return code;
+};
+
+Blockly.JavaScript['matrix_flash'] = function(block) {
+  var number_seconds = block.getFieldValue('seconds');
+  var number_times = block.getFieldValue('times');
+  var code = 252 + ',' + number_seconds + ',' + number_times;
+  return code;
+};
+
+Blockly.JavaScript['matrix_clear'] = function(block) {
+  var code = 248 + ',';
+  return code;
+};
+
+Blockly.JavaScript['matrix_pixel'] = function(block) {
+  var colour_color = block.getFieldValue('color');
+  var number_x = block.getFieldValue('X');
+  var number_y = block.getFieldValue('Y');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...;\n';
+  return code;
+};
+
+Blockly.JavaScript['matrix_row'] = function(block) {
+  var dropdown_row = block.getFieldValue('row');
+  var colour_color = block.getFieldValue('color');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...;\n';
+  return code;
+};
+
+Blockly.JavaScript['matrix_column'] = function(block) {
+  var dropdown_col = block.getFieldValue('col');
+  var colour_color = block.getFieldValue('color');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...;\n';
+  return code;
+};
+
 Blockly.JavaScript['exp_repeat'] = function(block) {
   var number_repeat = block.getFieldValue('repeat');
   var statements_repeat_loop = Blockly.JavaScript.statementToCode(block, 'repeat_loop');

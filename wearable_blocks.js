@@ -12,6 +12,144 @@ Blockly.Blocks['serial_data'] = {
   }
 };
 
+Blockly.Blocks['matrix_scroll'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("scrolling mode")
+        .appendField(new Blockly.FieldDropdown([["false","0"], ["true","1"]]), "NAME")
+        .appendField("speed")
+        .appendField(new Blockly.FieldDropdown([["slow","0"], ["medium","1"], ["fast","2"]]), "speed");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['matrix_fill'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("fill matrix")
+        .appendField(new Blockly.FieldColour("#66ffff"), "color");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['matrix_fade'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("fade from")
+        .appendField(new Blockly.FieldColour("#ffff33"), "color")
+        .appendField("to black over")
+        .appendField(new Blockly.FieldDropdown([["1","1"], ["2","2"], ["3","3"]]), "seconds")
+        .appendField("seconds");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['matrix_strobe'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("strobe")
+        .appendField(new Blockly.FieldColour("#33ff33"), "color")
+        .appendField("for")
+        .appendField(new Blockly.FieldNumber(0, 0, 5, 1), "seconds")
+        .appendField("seconds")
+        .appendField(new Blockly.FieldNumber(0, 0, 5, 1), "times")
+        .appendField("times");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['matrix_flash'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("flash matrix")
+        .appendField("for")
+        .appendField(new Blockly.FieldNumber(0, 0, 5, 1), "seconds")
+        .appendField("seconds")
+        .appendField(new Blockly.FieldNumber(0, 0, 5, 1), "times")
+        .appendField("times");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['matrix_clear'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("clear matrix");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['matrix_pixel'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("matrix pixel")
+        .appendField(new Blockly.FieldColour("#ff99ff"), "color")
+        .appendField("at")
+        .appendField(new Blockly.FieldNumber(0, 0, 63, 1), "X")
+        .appendField(",")
+        .appendField(new Blockly.FieldNumber(0, 0, 63, 1), "Y");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['matrix_row'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("matrix row")
+        .appendField(new Blockly.FieldDropdown([["0","0"], ["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"], ["6","6"], ["7","7"]]), "row")
+        .appendField("with")
+        .appendField(new Blockly.FieldColour("#ff99ff"), "color");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['matrix_column'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("matrix column")
+        .appendField(new Blockly.FieldDropdown([["0","0"], ["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"], ["6","6"], ["7","7"]]), "col")
+        .appendField("with")
+        .appendField(new Blockly.FieldColour("#ff99ff"), "color");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
 Blockly.Blocks['exp_repeat'] = {
   init: function() {
     this.appendDummyInput()
