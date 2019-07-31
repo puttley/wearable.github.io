@@ -21,7 +21,7 @@ Blockly.Blocks['matrix_scroll'] = {
         .appendField(new Blockly.FieldDropdown([["slow","0"], ["medium","1"], ["fast","2"]]), "speed");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#A1887F");
+    this.setColour("#78909C");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -34,7 +34,7 @@ Blockly.Blocks['matrix_fill'] = {
         .appendField(new Blockly.FieldColour("#66ffff"), "color");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#A1887F");
+    this.setColour("#78909C");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -50,7 +50,7 @@ Blockly.Blocks['matrix_fade'] = {
         .appendField("seconds");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#A1887F");
+    this.setColour("#78909C");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -68,7 +68,7 @@ Blockly.Blocks['matrix_strobe'] = {
         .appendField("times");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#A1887F");
+    this.setColour("#78909C");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -85,7 +85,7 @@ Blockly.Blocks['matrix_flash'] = {
         .appendField("times");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#A1887F");
+    this.setColour("#78909C");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -97,7 +97,7 @@ Blockly.Blocks['matrix_clear'] = {
         .appendField("clear matrix");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#A1887F");
+    this.setColour("#78909C");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -114,7 +114,7 @@ Blockly.Blocks['matrix_pixel'] = {
         .appendField(new Blockly.FieldNumber(0, 0, 63, 1), "Y");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#A1887F");
+    this.setColour("#78909C");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -129,7 +129,7 @@ Blockly.Blocks['matrix_row'] = {
         .appendField(new Blockly.FieldColour("#ff99ff"), "color");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#A1887F");
+    this.setColour("#78909C");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -144,7 +144,7 @@ Blockly.Blocks['matrix_column'] = {
         .appendField(new Blockly.FieldColour("#ff99ff"), "color");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#A1887F");
+    this.setColour("#78909C");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -555,7 +555,7 @@ Blockly.Blocks['pixel_matrix'] = {
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#A1887F");
+    this.setColour("#78909C");
  this.setTooltip("");
  this.setHelpUrl("");
   }
