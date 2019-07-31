@@ -189,11 +189,11 @@ Blockly.Blocks['exp_blink'] = {
 Blockly.Blocks['exp_show_image'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("show image")
+        .appendField("matrix image")
         .appendField(new Blockly.FieldDropdown([["heart","150"], ["purple bird","151"], ["smiley face","152"], ["frowny face","153"], ["cry face","154"], ["twitter","155"], ["crab","156"], ["figure","157"]]), "images");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#BA68C8");
+    this.setColour("#78909C");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -202,13 +202,13 @@ Blockly.Blocks['exp_show_image'] = {
 Blockly.Blocks['exp_character'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("show character")
+        .appendField("matrix character")
         .appendField(new Blockly.FieldDropdown([["A","A"], ["B","B"], ["C","C"], ["D","D"], ["E","E"], ["F","F"], ["G","G"], ["H","H"], ["I","I"], ["J","J"], ["K","K"], ["L","L"], ["M","M"], ["N","N"], ["O","O"], ["P","P"], ["Q","Q"], ["R","R"], ["S","S"], ["T","T"], ["U","U"], ["V","V"], ["X","X"], ["Y","Y"], ["Z","Z"]]), "character")
         .appendField("color")
         .appendField(new Blockly.FieldColour("#ffffff"), "color");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#BA68C8");
+    this.setColour("#78909C");
  this.setTooltip("");
  this.setHelpUrl("");
   }
