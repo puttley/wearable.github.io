@@ -34,8 +34,8 @@ Blockly.Blocks['sense_left'] = {
         .appendField('tilt');
         var options = [
             ['none', 'NONE'],
-            [{'images/': 'cube_left_tilt.PNG', 'width': 50, 'height': 50, 'alt': 'left'}, 'left'],
-            [{'images/': 'cube_right_tilt.PNG', 'width': 50, 'height': 50, 'alt': 'right'}, 'right']
+            [{'images': 'cube_left_tilt.PNG', 'width': 50, 'height': 50, 'alt': 'left'}, 'left'],
+            [{'images': 'cube_right_tilt.PNG', 'width': 50, 'height': 50, 'alt': 'right'}, 'right']
 
         ];
         input.appendField(new Blockly.FieldDropdown(options), 'tilt');
