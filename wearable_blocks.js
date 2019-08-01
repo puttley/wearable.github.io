@@ -30,12 +30,12 @@ Blockly.Blocks['serial_data'] = {
 Blockly.Blocks['sense_tilt'] = {
   init: function() {
         var input = this.appendDummyInput()
-        .appendField('tilting');
+        .appendField('cube tilting');
         var options = [
             [{'src': 'images/cube_left_tilt.png', 'width': 50, 'height': 50, 'alt': 'left'}, '3'],
             [{'src': 'images/cube_right_tilt.png', 'width': 50, 'height': 50, 'alt': 'right'}, '4'],
-            [{'src': 'images/cube_up_tilt.png', 'width': 50, 'height': 50, 'alt': 'forward'}, '1'],
-            [{'src': 'images/cube_down_tilt.png', 'width': 50, 'height': 50, 'alt': 'backward'}, '2']
+            [{'src': 'images/cube_up_tilt.png', 'width': 50, 'height': 50, 'alt': 'forward'}, '2'],
+            [{'src': 'images/cube_down_tilt.png', 'width': 50, 'height': 50, 'alt': 'backward'}, '1']
 
         ];
         input.appendField(new Blockly.FieldDropdown(options), 'tilt');
@@ -49,7 +49,7 @@ Blockly.Blocks['sense_tilt'] = {
 Blockly.Blocks['sense_facing'] = {
   init: function() {
         var input = this.appendDummyInput()
-        .appendField('matrix facing');
+        .appendField('cube facing');
         var options = [
             [{'src': 'images/cube_faceup.png', 'width': 50, 'height': 50, 'alt': 'up'}, '5'],
             [{'src': 'images/cube_facedown.png', 'width': 50, 'height': 50, 'alt': 'down'}, '6']
