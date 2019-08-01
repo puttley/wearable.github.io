@@ -39,7 +39,7 @@ Blockly.Blocks['sense_left'] = {
 },
 onchange: function(ev) {
 
-  console.log(this.tilt.getFieldValue);
+  console.log(this.tilt.getFieldValue());
 
     if(this.getFieldValue.tilt == "left") {this.appendField(new Blockly.FieldImage("images/cube_left_tilt.PNG", 50, 50, "*"));}
       if(this.getFieldValue.tilt == 'left') {this.appendField(new Blockly.FieldImage("images/cube_left_tilt.PNG", 50, 50, "*"));}
