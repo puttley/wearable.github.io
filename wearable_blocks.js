@@ -51,8 +51,8 @@ Blockly.Blocks['sense_facing'] = {
         var input = this.appendDummyInput()
         .appendField('matrix facing');
         var options = [
-            [{'src': 'images/cube_faceup.PNG', 'width': 50, 'height': 50, 'alt': 'face up'}, '5'],
-            [{'src': 'images/cube_facedown.PNG', 'width': 50, 'height': 50, 'alt': 'face down'}, '6']
+            [{'src': 'images/cube_faceup.PNG', 'width': 50, 'height': 50, 'alt': 'up'}, '5'],
+            [{'src': 'images/cube_facedown.PNG', 'width': 50, 'height': 50, 'alt': 'down'}, '6']
 
         ];
         input.appendField(new Blockly.FieldDropdown(options), 'facing');
