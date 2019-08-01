@@ -29,21 +29,27 @@ Blockly.Blocks['serial_data'] = {
 
 Blockly.Blocks['sense_left'] = {
   init: function() {
-    this.appendDummyInput('1')
-        .appendField(new Blockly.FieldDropdown([["left","0"], ["right","1"], ["forward","2"]]), "tilt")
-        .appendField("tilt 2")
-        .appendField(new Blockly.FieldImage("images/cube_left_tilt.PNG", 50, 50, "*"));
+    this.appendDummyInput()
+        var input = this.appendDummyInput()
+        .appendField('tilt');
+        var options = [
+            ['none', 'NONE'],
+            [{'images/': 'cube_left_tilt.PNG', 'width': 50, 'height': 50, 'alt': 'left'}, 'left'],
+            [{'images/': 'cube_right_tilt.PNG', 'width': 50, 'height': 50, 'alt': 'right'}, 'right']
+
+        ];
+        input.appendField(new Blockly.FieldDropdown(options), 'tilt');
     this.setOutput(true, null);
     this.setColour(230);
- this.setTooltip("");
- this.setHelpUrl("");
+    this.setTooltip("");
+    this.setHelpUrl("");
 },
 onchange: function(ev) {
 
-  var image = (this.getFieldValue('tilt'));
+//  var image = (this.getFieldValue('tilt'));
 
-    if(image == 0) {this.appendDummyInput('1').appendField(Blockly.FieldImage("images/cube_left_tilt.PNG", 50, 50, "*"));}
-    if(image == 1) {this.appendDummyInput('1').appendField(Blockly.FieldImage("images/cube_right_tilt.PNG", 50, 50, "*"));}
+//    if(image == 0) {this.appendDummyInput('1').appendField(Blockly.FieldImage("images/cube_left_tilt.PNG", 50, 50, "*"));}
+//    if(image == 1) {this.appendDummyInput('1').appendField(Blockly.FieldImage("images/cube_right_tilt.PNG", 50, 50, "*"));}
 
  }
 };
