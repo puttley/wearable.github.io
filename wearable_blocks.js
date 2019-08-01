@@ -29,13 +29,13 @@ Blockly.Blocks['serial_data'] = {
 
 Blockly.Blocks['sense_left'] = {
   init: function() {
-//    this.appendDummyInput()
         var input = this.appendDummyInput()
         .appendField('tilt');
         var options = [
-            ['none', 'NONE'],
-            [{'src': 'images/cube_left_tilt.PNG', 'width': 50, 'height': 50, 'alt': 'left'}, '0'],
-            [{'src': 'images/cube_right_tilt.PNG', 'width': 50, 'height': 50, 'alt': 'right'}, '1']
+            [{'src': 'images/cube_left_tilt.PNG', 'width': 50, 'height': 50, 'alt': 'left'}, '3'],
+            [{'src': 'images/cube_right_tilt.PNG', 'width': 50, 'height': 50, 'alt': 'right'}, '4'],
+            [{'src': 'images/cube_up_tilt.PNG', 'width': 50, 'height': 50, 'alt': 'forward'}, '1'],
+            [{'src': 'images/cube_down_tilt.PNG', 'width': 50, 'height': 50, 'alt': 'backward'}, '2']
 
         ];
         input.appendField(new Blockly.FieldDropdown(options), 'tilt');
