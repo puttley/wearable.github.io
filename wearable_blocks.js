@@ -16,7 +16,7 @@ Blockly.Blocks['sense_left'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("tilted left")
-        .appendField(new Blockly.FieldImage("images/Top_view.JPG", 50, 50, "*"));
+        .appendField(new Blockly.FieldImage("images/cube_left_tilt.PNG", 60, 60, "*"));
     this.setOutput(true, null);
     this.setColour(230);
  this.setTooltip("");
