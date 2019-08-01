@@ -6,9 +6,15 @@ Blockly.JavaScript['serial_data'] = function(block) {
   return code;
 };
 
-Blockly.JavaScript['sense_left'] = function(block) {
+Blockly.JavaScript['sense_tilt'] = function(block) {
   var dropdown_tilt = block.getFieldValue('tilt');
   var code = dropdown_tilt + ',';
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
+Blockly.JavaScript['sense_facing'] = function(block) {
+  var dropdown_is = block.getFieldValue('facing');
+  var code = dropdown_is + ',';
   return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 

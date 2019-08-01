@@ -27,10 +27,10 @@ Blockly.Blocks['serial_data'] = {
 
 //};
 
-Blockly.Blocks['sense_left'] = {
+Blockly.Blocks['sense_tilt'] = {
   init: function() {
         var input = this.appendDummyInput()
-        .appendField('tilt');
+        .appendField('tilting');
         var options = [
             [{'src': 'images/cube_left_tilt.PNG', 'width': 50, 'height': 50, 'alt': 'left'}, '3'],
             [{'src': 'images/cube_right_tilt.PNG', 'width': 50, 'height': 50, 'alt': 'right'}, '4'],
@@ -40,7 +40,24 @@ Blockly.Blocks['sense_left'] = {
         ];
         input.appendField(new Blockly.FieldDropdown(options), 'tilt');
     this.setOutput(true, null);
-    this.setColour(230);
+    this.setColour("#009688");
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['sense_facing'] = {
+  init: function() {
+        var input = this.appendDummyInput()
+        .appendField('matrix facing');
+        var options = [
+            [{'src': 'images/cube_faceup.PNG', 'width': 50, 'height': 50, 'alt': 'face up'}, '5'],
+            [{'src': 'images/cube_facedown.PNG', 'width': 50, 'height': 50, 'alt': 'face down'}, '6']
+
+        ];
+        input.appendField(new Blockly.FieldDropdown(options), 'facing');
+    this.setOutput(true, null);
+    this.setColour("#009688");
     this.setTooltip("");
     this.setHelpUrl("");
   }
@@ -357,8 +374,8 @@ Blockly.Blocks['exp_tilt'] = {
 Blockly.Blocks['exp_is'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("cube matrix facing")
-        .appendField(new Blockly.FieldDropdown([["up","5"], ["down","6"]]), "is");
+        .appendField("matrix is facing")
+        .appendField(new Blockly.FieldDropdown([["up (level)","5"], ["down (upside down)","6"]]), "is");
     this.setOutput(true, null);
     this.setColour("#009688");
  this.setTooltip("");
