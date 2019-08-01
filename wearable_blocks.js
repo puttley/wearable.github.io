@@ -31,13 +31,13 @@ Blockly.Blocks['sense_left'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(new Blockly.FieldDropdown([["left","0"], ["right","1"], ["forward","2"]]), "tilt")
-        .appendField("tilt_2");
+        .appendField("tilt_3");
     this.setOutput(true, null);
     this.setColour(230);
  this.setTooltip("");
  this.setHelpUrl("");
 },
-validate: function(ev) {
+onchange: function(ev) {
 
     if(this.getFieldValue.tilt == "left") {this.appendField(new Blockly.FieldImage("images/cube_left_tilt.PNG", 50, 50, "*"));}
       if(this.getFieldValue.tilt == 'left') {this.appendField(new Blockly.FieldImage("images/cube_left_tilt.PNG", 50, 50, "*"));}
