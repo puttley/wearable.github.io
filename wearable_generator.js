@@ -7,10 +7,9 @@ Blockly.JavaScript['serial_data'] = function(block) {
 };
 
 Blockly.JavaScript['sense_left'] = function(block) {
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...';
-  // TODO: Change ORDER_NONE to the correct strength.
-  return [code, Blockly.JavaScript.ORDER_NONE];
+  var dropdown_tilt = block.getFieldValue('tilt');
+  var code = dropdown_tilt + ',';
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
 Blockly.JavaScript['matrix_bright'] = function(block) {
