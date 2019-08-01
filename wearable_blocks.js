@@ -31,7 +31,7 @@ Blockly.Blocks['sense_left'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(new Blockly.FieldDropdown([["left","0"], ["right","1"], ["forward","2"]]), "tilt")
-        .appendField("tilt_3");
+        .appendField("tilt_1");
     this.setOutput(true, null);
     this.setColour(230);
  this.setTooltip("");
@@ -39,7 +39,7 @@ Blockly.Blocks['sense_left'] = {
 },
 validate: function(ev) {
 
-    if(this.getFieldValue == "left") {this.appendField(new Blockly.FieldImage("images/cube_left_tilt.PNG", 50, 50, "*"));}
+    if(tilt.getFieldValue == "left") {this.appendField(new Blockly.FieldImage("images/cube_left_tilt.PNG", 50, 50, "*"));}
 
  }
 };
