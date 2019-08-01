@@ -29,7 +29,7 @@ Blockly.Blocks['serial_data'] = {
 
 Blockly.Blocks['sense_left'] = {
   init: function() {
-    this.appendDummyInput()
+//    this.appendDummyInput()
         var input = this.appendDummyInput()
         .appendField('tilt 2');
         var options = [
