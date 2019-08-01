@@ -15,9 +15,8 @@ Blockly.Blocks['serial_data'] = {
 Blockly.Blocks['sense_left'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("tilted left");
-    //    .appendField(new Blockly.FieldImage("images/blink.png", 25, 25, "*"));
-        .appendField(new Blockly.FieldImage("images/star_on.gif", 15, 15, "*"));
+        .appendField("tilted left")
+        .appendField(new Blockly.FieldImage("images/Top_view.JPG", 25, 25, "*"));
     this.setOutput(true, null);
     this.setColour(230);
  this.setTooltip("");
