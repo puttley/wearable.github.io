@@ -42,8 +42,8 @@ onchange: function(ev) {
 
   var image = (this.getFieldValue('tilt'));
 
-    if(image == 0) {this.appendDummyInput('1').appendField(new Blockly.FieldImage("images/cube_left_tilt.PNG", 50, 50, "*"));}
-    if(image == 1) {this.appendDummyInput('1').appendField(new Blockly.FieldImage("images/cube_right_tilt.PNG", 50, 50, "*"));}
+    if(image == 0) {this.appendDummyInput('1').appendField(Blockly.FieldImage("images/cube_left_tilt.PNG", 50, 50, "*"));}
+    if(image == 1) {this.appendDummyInput('1').appendField(Blockly.FieldImage("images/cube_right_tilt.PNG", 50, 50, "*"));}
 
  }
 };
