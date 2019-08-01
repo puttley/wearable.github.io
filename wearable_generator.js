@@ -6,6 +6,20 @@ Blockly.JavaScript['serial_data'] = function(block) {
   return code;
 };
 
+Blockly.JavaScript['sense_left'] = function(block) {
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['matrix_bright'] = function(block) {
+  var number_brightness = block.getFieldValue('brightness');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...;\n';
+  return code;
+};
+
 Blockly.JavaScript['matrix_scroll'] = function(block) {
   var dropdown_name = block.getFieldValue('NAME');
   var dropdown_speed = block.getFieldValue('speed');

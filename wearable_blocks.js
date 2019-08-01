@@ -12,6 +12,32 @@ Blockly.Blocks['serial_data'] = {
   }
 };
 
+Blockly.Blocks['sense_left'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("tilted left");
+        .appendField(new Blockly.FieldImage("images/Top_view.jpg", 15, 15, "*"));
+    this.setOutput(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['matrix_bright'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("set brightness")
+        .appendField(new Blockly.FieldNumber(0, 0, 100, 1), "brightness")
+        .appendField("percent %");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#78909C");
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
 Blockly.Blocks['matrix_scroll'] = {
   init: function() {
     this.appendDummyInput()
@@ -193,7 +219,7 @@ Blockly.Blocks['exp_show_image'] = {
         .appendField(new Blockly.FieldDropdown([["heart","150"], ["purple bird","151"], ["smiley face","152"], ["frowny face","153"], ["cry face","154"], ["twitter","155"], ["crab","156"], ["figure","157"]]), "images");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#BA68C8");
+    this.setColour("#78909C");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -208,7 +234,7 @@ Blockly.Blocks['exp_character'] = {
         .appendField(new Blockly.FieldColour("#ffffff"), "color");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#BA68C8");
+    this.setColour("#78909C");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -296,7 +322,7 @@ Blockly.Blocks['cube_loop_forever'] = {
 Blockly.Blocks['exp_tilt'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("CODE CUBE tilts")
+        .appendField("cube tilting")
         .appendField(new Blockly.FieldDropdown([["left","3"], ["right","4"], ["front","1"], ["back","2"]]), "tilt");
     this.setOutput(true, null);
     this.setColour("#009688");
@@ -308,7 +334,7 @@ Blockly.Blocks['exp_tilt'] = {
 Blockly.Blocks['exp_is'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("CODE CUBE display is")
+        .appendField("cube matrix facing")
         .appendField(new Blockly.FieldDropdown([["up","5"], ["down","6"]]), "is");
     this.setOutput(true, null);
     this.setColour("#009688");
@@ -386,6 +412,8 @@ Blockly.Blocks['exp_clear_block'] = {
  this.setHelpUrl("");
   }
 };
+
+
 
 Blockly.Blocks['exp_start'] = {
   init: function() {
