@@ -12,17 +12,37 @@ Blockly.Blocks['serial_data'] = {
   }
 };
 
+
+//Blockly.Blocks['sense_left'] = {
+//  init: function() {
+//    this.appendDummyInput()
+//        .appendField("tilt")
+//        .appendField(new Blockly.FieldImage("images/cube_left_tilt.PNG", 60, 60, "*"));
+//    this.setOutput(true, null);
+//    this.setColour(230);
+// this.setTooltip("");
+// this.setHelpUrl("");
+//  }
+
+
+//};
+
 Blockly.Blocks['sense_left'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("tilted left")
-        .appendField(new Blockly.FieldImage("images/cube_left_tilt.PNG", 60, 60, "*"));
+        .appendField(new Blockly.FieldDropdown([["left","0"], ["right","1"], ["forward","2"]]), "tilt")
+        .appendField("tilt");
     this.setOutput(true, null);
     this.setColour(230);
  this.setTooltip("");
  this.setHelpUrl("");
-  }
+},
+onchange: function(ev) {
+    if(tilt == 0) {this.appendField(new Blockly.FieldImage("images/cube_left_tilt.PNG", 50, 50, "*"));}
+    if(tilt == 1) {this.appendField(new Blockly.FieldImage("images/cube_left_tilt.PNG", 50, 50, "*"));}
+ }
 };
+
 
 Blockly.Blocks['matrix_bright'] = {
   init: function() {
