@@ -13,8 +13,8 @@ Blockly.JavaScript['sense_tilt'] = function(block) {
 };
 
 Blockly.JavaScript['sense_facing'] = function(block) {
-  var dropdown_is = block.getFieldValue('facing');
-  var code = dropdown_is + ',';
+  var dropdown_facing = block.getFieldValue('facing');
+  var code = dropdown_facing + ',';
   return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
