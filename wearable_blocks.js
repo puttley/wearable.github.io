@@ -38,8 +38,8 @@ Blockly.Blocks['sense_left'] = {
  this.setHelpUrl("");
 },
 onchange: function(ev) {
-    if(tilt == 0) {this.appendField(new Blockly.FieldImage("images/cube_left_tilt.PNG", 50, 50, "*"));}
-    if(tilt == 1) {this.appendField(new Blockly.FieldImage("images/cube_left_tilt.PNG", 50, 50, "*"));}
+    if(tilt == '0') {this.appendField(new Blockly.FieldImage("images/cube_left_tilt.PNG", 50, 50, "*"));}
+    if(tilt == '1') {this.appendField(new Blockly.FieldImage("images/cube_left_tilt.PNG", 50, 50, "*"));}
  }
 };
 
