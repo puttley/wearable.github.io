@@ -175,8 +175,14 @@ Blockly.JavaScript['exp_wait_for'] = function(block) {
 
 Blockly.JavaScript['cube_wait_until'] = function(block) {
   var value_tilt = Blockly.JavaScript.valueToCode(block, 'tilt', Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
   var code = 244 + ',' + value_tilt + ',';
+  return code;
+};
+
+Blockly.JavaScript['cube_loop_until'] = function(block) {
+  var value_condition = Blockly.JavaScript.valueToCode(block, 'condition', Blockly.JavaScript.ORDER_ATOMIC);
+  var statements_until = Blockly.JavaScript.statementToCode(block, 'until');
+  var code = 241 + ',' + value_condition + ',' + statements_until + ',' + 128 + ',';
   return code;
 };
 
