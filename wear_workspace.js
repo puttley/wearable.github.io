@@ -28,7 +28,35 @@ var options = {
 };
 
 /* Inject your workspace */
- var workspace = Blockly.inject('blocklyDiv', options);
+// var workspace = Blockly.inject('blocklyDiv', options);
+
+
+  var blocklyArea = document.getElementById('blocklyArea');
+  var blocklyDiv = document.getElementById('blocklyDiv');
+  var workspace = Blockly.inject(blocklyDiv,
+      {toolbox: document.getElementById('toolbox')});
+  var onresize = function(e) {
+    // Compute the absolute coordinates and dimensions of blocklyArea.
+    var element = blocklyArea;
+    var x = 0;
+    var y = 0;
+    do {
+      x += element.offsetLeft;
+      y += element.offsetTop;
+      element = element.offsetParent;
+    } while (element);
+    // Position blocklyDiv over blocklyArea.
+    blocklyDiv.style.left = x + 'px';
+    blocklyDiv.style.top = y + 'px';
+    blocklyDiv.style.width = blocklyArea.offsetWidth + 'px';
+    blocklyDiv.style.height = blocklyArea.offsetHeight + 'px';
+    Blockly.svgResize(workspace);
+  };
+  window.addEventListener('resize', onresize, false);
+  onresize();
+  Blockly.svgResize(workspace);
+
+
 
 /* Load Workspace Blocks from XML to workspace. Remove all code below if no blocks to load */
 //var xml = '<xml><block type="frame_strip_15" deletable="true" movable="true"></block></xml>';
