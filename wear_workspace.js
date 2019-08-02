@@ -28,10 +28,10 @@ var options = {
 };
 
 /* Inject your workspace */
-// var workspace = Blockly.inject('blocklyDiv', options);
+ var workspace = Blockly.inject('blocklyDiv', options);
 
 
- 
+
 
 /* Load Workspace Blocks from XML to workspace. Remove all code below if no blocks to load */
 //var xml = '<xml><block type="frame_strip_15" deletable="true" movable="true"></block></xml>';
