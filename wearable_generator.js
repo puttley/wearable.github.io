@@ -133,7 +133,6 @@ Blockly.JavaScript['exp_character'] = function(block) {
 Blockly.JavaScript['exp_if_block'] = function(block) {
   var value_if = Blockly.JavaScript.valueToCode(block, 'if', Blockly.JavaScript.ORDER_ATOMIC);
   var statements_doblocks = Blockly.JavaScript.statementToCode(block, 'doBlocks');
-  // TODO: Assemble JavaScript into code variable.
   var code = 254 + ',' + value_if + ',' + statements_doblocks + ',' + 128 + ',';
   return code;
 };
@@ -142,8 +141,7 @@ Blockly.JavaScript['cube_if_else'] = function(block) {
   var value_condition = Blockly.JavaScript.valueToCode(block, 'condition', Blockly.JavaScript.ORDER_ATOMIC);
   var statements_then = Blockly.JavaScript.statementToCode(block, 'then');
   var statements_else = Blockly.JavaScript.statementToCode(block, 'else');
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+  var code = 242 + ',' + value_condition + ',' + statements_then + ',' + 128 + ','+ statements_else + ',' + 129 + ',';
   return code;
 };
 
