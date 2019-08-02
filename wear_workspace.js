@@ -28,8 +28,8 @@ var options = {
 };
 
 /* Inject your workspace */
-// var workspace = Blockly.inject('blocklyDiv', options);
-var workspace = Blockly.inject('blocklyDiv');
+ 	var workspace = Blockly.inject('blocklyDiv', options);
+
 
 
 
