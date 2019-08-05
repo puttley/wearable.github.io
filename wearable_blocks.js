@@ -173,11 +173,9 @@ Blockly.Blocks['matrix_pixel'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("matrix pixel")
-        .appendField(new Blockly.FieldColour("#ff99ff"), "color")
-        .appendField("at")
-        .appendField(new Blockly.FieldNumber(0, 0, 63, 1), "X")
-        .appendField(",")
-        .appendField(new Blockly.FieldNumber(0, 0, 63, 1), "Y");
+        .appendField(new Blockly.FieldNumber(0, 1, 64, 1), "X")
+        .appendField("with")
+        .appendField(new Blockly.FieldColour("#ff99ff"), "color");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#78909C");

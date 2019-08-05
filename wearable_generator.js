@@ -77,6 +77,13 @@ Blockly.JavaScript['matrix_pixel'] = function(block) {
   return code;
 };
 
+Blockly.JavaScript['matrix_pixel'] = function(block) {
+  var number_x = block.getFieldValue('X');
+  var colour_color = block.getFieldValue('color');
+  var code = 239 + ',' + number_x + ','+ pickycolor(colour_color) + ',';
+  return code;
+};
+
 Blockly.JavaScript['matrix_row'] = function(block) {
   var dropdown_row = block.getFieldValue('row');
   var colour_color = block.getFieldValue('color');
