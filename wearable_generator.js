@@ -70,17 +70,10 @@ Blockly.JavaScript['matrix_clear'] = function(block) {
 };
 
 Blockly.JavaScript['matrix_pixel'] = function(block) {
+  var number_row = block.getFieldValue('row');
+  var number_col = block.getFieldValue('col');
   var colour_color = block.getFieldValue('color');
-  var number_x = block.getFieldValue('X');
-  var number_y = block.getFieldValue('Y');
-  var code = 239 + ',' + pickycolor(colour_color) + ',' + number_x + ',' + number_y + ',';
-  return code;
-};
-
-Blockly.JavaScript['matrix_pixel'] = function(block) {
-  var number_x = block.getFieldValue('X');
-  var colour_color = block.getFieldValue('color');
-  var code = 239 + ',' + number_x + ','+ pickycolor(colour_color) + ',';
+  var code = 239 + ',' + number_row + ',' + number_col + ',' + pickycolor(colour_color) + ',';
   return code;
 };
 

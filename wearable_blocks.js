@@ -172,8 +172,10 @@ Blockly.Blocks['matrix_clear'] = {
 Blockly.Blocks['matrix_pixel'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("matrix pixel")
-        .appendField(new Blockly.FieldNumber(0, 1, 64, 1), "X")
+        .appendField("matrix pixel at row")
+        .appendField(new Blockly.FieldNumber(0, 1, 8, 1), "row")
+        .appendField(", column")
+        .appendField(new Blockly.FieldNumber(0, 1, 8, 1), "col")
         .appendField("with")
         .appendField(new Blockly.FieldColour("#ff99ff"), "color");
     this.setPreviousStatement(true, null);
