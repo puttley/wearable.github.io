@@ -87,8 +87,7 @@ Blockly.JavaScript['matrix_row'] = function(block) {
 Blockly.JavaScript['matrix_column'] = function(block) {
   var dropdown_col = block.getFieldValue('col');
   var colour_color = block.getFieldValue('color');
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+  var code = 237 + ',' + dropdown_col + ',' + pickycolor(colour_color) + ',';
   return code;
 };
 

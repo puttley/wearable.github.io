@@ -205,7 +205,7 @@ Blockly.Blocks['matrix_column'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("matrix column")
-        .appendField(new Blockly.FieldDropdown([["0","0"], ["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"], ["6","6"], ["7","7"]]), "col")
+        .appendField(new Blockly.FieldDropdown([["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"], ["6","6"], ["7","7"], ["8","8"]]), "col")
         .appendField("with")
         .appendField(new Blockly.FieldColour("#ff99ff"), "color");
     this.setPreviousStatement(true, null);
