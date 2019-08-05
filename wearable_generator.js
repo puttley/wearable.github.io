@@ -186,10 +186,10 @@ Blockly.JavaScript['cube_loop_until'] = function(block) {
   return code;
 };
 
-Blockly.JavaScript['cube_loop_forever'] = function(block) {
-  var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+Blockly.JavaScript['cube_loop_while'] = function(block) {
+  var value_condition = Blockly.JavaScript.valueToCode(block, 'condition', Blockly.JavaScript.ORDER_ATOMIC);
+  var statements_while = Blockly.JavaScript.statementToCode(block, 'while');
+  var code = 240 + ',' + value_condition + ',' + statements_while + ',' + 128 + ',';
   return code;
 };
 

@@ -345,12 +345,15 @@ Blockly.Blocks['cube_loop_until'] = {
   }
 };
 
-Blockly.Blocks['cube_loop_forever'] = {
+Blockly.Blocks['cube_loop_while'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("loop forever");
-    this.appendStatementInput("NAME")
+        .appendField("loop while");
+   this.appendValueInput("condition")
         .setCheck(null);
+    this.appendStatementInput("while")
+        .setCheck(null);
+    this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#5C6BC0");
