@@ -73,8 +73,7 @@ Blockly.JavaScript['matrix_pixel'] = function(block) {
   var colour_color = block.getFieldValue('color');
   var number_x = block.getFieldValue('X');
   var number_y = block.getFieldValue('Y');
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+  var code = 239 + ',' + colour_color + ',' + number_x + ',' + number_y + ',';
   return code;
 };
 
