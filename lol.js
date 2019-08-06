@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	serial.getPorts().then(ports => {
 		if (ports.length == 0) {
-			device.textContent = 'Codeable Wearable not Found.';
+			device.textContent = 'Code Cube not Found...';
 			main.classList.add('error');
 		} else {
 			device.textContent = 'Connecting...';
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			connectButton.innerHTML = '<b>&times;</b> disconnect';
 
 			device.innerHTML = `&#x2714; Connected with ${port.device_.productName}.`;
-			device.textContent = 'Connected with Codeable Wearable';
+			device.textContent = 'Connected to Code Cube';
 			main.classList.remove('error');
 
 			port.onReceive = data => {

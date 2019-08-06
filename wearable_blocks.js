@@ -67,8 +67,8 @@ Blockly.Blocks['sense_facing'] = {
 Blockly.Blocks['matrix_bright'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("set brightness")
-        .appendField(new Blockly.FieldNumber(0, 0, 100, 1), "brightness")
+        .appendField("set brightness to")
+        .appendField(new Blockly.FieldNumber(50, 0, 100, 1), "brightness")
         .appendField("percent %");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -453,7 +453,7 @@ Blockly.Blocks['exp_clear_block'] = {
 Blockly.Blocks['exp_start'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("start program")
+        .appendField("on program start")
     //    .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"));
         .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"));
     this.setNextStatement(true, null);

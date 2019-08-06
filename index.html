@@ -63,12 +63,12 @@
 
   <p>
 
-    <button onclick="showCode()">Show Code</button>
+<!--    <button onclick="showCode()">Show Code</button> -->
     <button onclick="sendCode()">Send Code</button>
 <!--    <button onclick="importCode()">Import Code</button> -->
 <!--    <button onclick="exportCode()">Export Code</button> -->
-    <button onclick="backup_blocks()">Backup Blocks</button>
-    <button onclick="restore_blocks()">Restore Blocks</button>
+    <button onclick="backup_blocks()">Save Session</button>
+    <button onclick="restore_blocks()">Restore Session</button>
     <button onclick="document.getElementById('file-input').click();">Open Blocks</button>
         <input id="file-input" type="file" name="name" onchange="readFiles(this.files)" style="display: none;" />
     <button onclick="save()">Download Blocks</button>
@@ -87,13 +87,13 @@
       <category name = "Control" colour = "#5C6BC0">
         <block type="exp_start"></block>
         <block type="exp_end"></block>
+        <block type="exp_delay"></block>
         <block type="exp_if_block"></block>
         <block type="cube_if_else"></block>
+        <block type="exp_repeat"></block>
         <block type="cube_loop_until"></block>
         <block type="cube_loop_while"></block>
-        <block type="exp_repeat"></block>
         <block type="cube_wait_until"></block>
-        <block type="exp_delay"></block>
       </category>
 
       <category name = "Sensing" colour = "#009688">
