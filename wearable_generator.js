@@ -48,8 +48,7 @@ Blockly.JavaScript['matrix_strobe'] = function(block) {
   var colour_color = block.getFieldValue('color');
   var number_seconds = block.getFieldValue('seconds');
   var number_times = block.getFieldValue('times');
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+  var code = 233 + ',' + pickycolor(colour_color) + ',' + number_seconds + ',' + number_times + ',';
   return code;
 };
 

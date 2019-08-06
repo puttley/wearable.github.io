@@ -127,7 +127,7 @@ Blockly.Blocks['matrix_strobe'] = {
         .appendField(new Blockly.FieldColour("#33ff33"), "color")
         .appendField("for")
         .appendField(new Blockly.FieldNumber(0, 0, 5, 1), "seconds")
-        .appendField("seconds")
+        .appendField("second period")
         .appendField(new Blockly.FieldNumber(0, 0, 5, 1), "times")
         .appendField("times");
     this.setPreviousStatement(true, null);
