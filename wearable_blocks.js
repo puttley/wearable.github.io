@@ -96,7 +96,7 @@ Blockly.Blocks['matrix_scroll'] = {
 Blockly.Blocks['matrix_fill'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("fill matrix")
+        .appendField("fill matrix with")
         .appendField(new Blockly.FieldColour("#66ffff"), "color");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);

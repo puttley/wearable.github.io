@@ -36,7 +36,7 @@ Blockly.JavaScript['matrix_scroll'] = function(block) {
 Blockly.JavaScript['matrix_fill'] = function(block) {
   var colour_color = block.getFieldValue('color');
   // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+  var code = 236 + ',' + colour_color + ',';
   return code;
 };
 
