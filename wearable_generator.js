@@ -8,7 +8,7 @@ Blockly.JavaScript['serial_data'] = function(block) {
 
 Blockly.JavaScript['sense_shake'] = function(block) {
   var code = 7 + ',';
-  return code;
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
 Blockly.JavaScript['sense_tilt'] = function(block) {
