@@ -20,8 +20,7 @@ Blockly.JavaScript['sense_facing'] = function(block) {
 
 Blockly.JavaScript['matrix_bright'] = function(block) {
   var number_brightness = block.getFieldValue('brightness');
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+  var code = 234 + ',' + number_brightness + ',';
   return code;
 };
 
