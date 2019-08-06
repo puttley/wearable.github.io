@@ -123,12 +123,9 @@ Blockly.Blocks['matrix_fade'] = {
 Blockly.Blocks['matrix_strobe'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("strobe")
+        .appendField("strobe matrix color")
         .appendField(new Blockly.FieldColour("#33ff33"), "color")
-        .appendField("for")
-        .appendField(new Blockly.FieldNumber(0, 0, 5, 1), "seconds")
-        .appendField("second period")
-        .appendField(new Blockly.FieldNumber(0, 0, 5, 1), "times")
+        .appendField(new Blockly.FieldNumber(0, 0, 25, 1), "times")
         .appendField("times");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);

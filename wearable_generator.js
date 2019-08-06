@@ -52,6 +52,13 @@ Blockly.JavaScript['matrix_strobe'] = function(block) {
   return code;
 };
 
+Blockly.JavaScript['matrix_strobe'] = function(block) {
+  var colour_color = block.getFieldValue('color');
+  var number_times = block.getFieldValue('times');
+  var code = 233 + ',' + pickycolor(colour_color) + ',' + number_times + ',';
+  return code;
+};
+
 Blockly.JavaScript['matrix_flash'] = function(block) {
   var number_seconds = block.getFieldValue('seconds');
   var number_times = block.getFieldValue('times');
