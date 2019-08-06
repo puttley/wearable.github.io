@@ -30,7 +30,7 @@ Blockly.Blocks['serial_data'] = {
 Blockly.Blocks['sense_shake'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("cube shaking")
+        .appendField("cube shake detected")
         .appendField(new Blockly.FieldImage("images/shake.png", 50, 50, "cube shake"));
     this.setOutput(true, null);
     this.setColour("#009688");
