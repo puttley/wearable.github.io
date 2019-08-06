@@ -60,9 +60,8 @@ Blockly.JavaScript['matrix_strobe'] = function(block) {
 };
 
 Blockly.JavaScript['matrix_flash'] = function(block) {
-  var number_seconds = block.getFieldValue('seconds');
   var number_times = block.getFieldValue('times');
-  var code = 252 + ',' + number_seconds + ',' + number_times;
+  var code = 232 + ',' + number_times + ',';
   return code;
 };
 

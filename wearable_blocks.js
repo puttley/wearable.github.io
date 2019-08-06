@@ -125,7 +125,7 @@ Blockly.Blocks['matrix_strobe'] = {
     this.appendDummyInput()
         .appendField("strobe matrix color")
         .appendField(new Blockly.FieldColour("#33ff33"), "color")
-        .appendField(new Blockly.FieldNumber(0, 0, 25, 1), "times")
+        .appendField(new Blockly.FieldNumber(0, 0, 10, 1), "times")
         .appendField("times");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -138,11 +138,8 @@ Blockly.Blocks['matrix_strobe'] = {
 Blockly.Blocks['matrix_flash'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("flash matrix")
-        .appendField("for")
-        .appendField(new Blockly.FieldNumber(0, 0, 5, 1), "seconds")
-        .appendField("seconds")
-        .appendField(new Blockly.FieldNumber(0, 0, 5, 1), "times")
+        .appendField("blink matrix")
+        .appendField(new Blockly.FieldNumber(0, 0, 10, 1), "times")
         .appendField("times");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
