@@ -82,9 +82,9 @@ Blockly.Blocks['matrix_scroll'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("scrolling mode")
-        .appendField(new Blockly.FieldDropdown([["false","0"], ["true","1"]]), "NAME")
+        .appendField(new Blockly.FieldDropdown([["off","0"], ["on","1"]]), "NAME")
         .appendField("speed")
-        .appendField(new Blockly.FieldDropdown([["slow","0"], ["medium","1"], ["fast","2"]]), "speed");
+        .appendField(new Blockly.FieldDropdown([["slow","100"], ["medium","50"], ["fast","25"]]), "speed");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#78909C");
@@ -125,7 +125,7 @@ Blockly.Blocks['matrix_strobe'] = {
     this.appendDummyInput()
         .appendField("strobe matrix color")
         .appendField(new Blockly.FieldColour("#33ff33"), "color")
-        .appendField(new Blockly.FieldNumber(0, 0, 10, 1), "times")
+        .appendField(new Blockly.FieldNumber(1, 1, 10, 1), "times")
         .appendField("times");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -139,7 +139,7 @@ Blockly.Blocks['matrix_flash'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("blink matrix")
-        .appendField(new Blockly.FieldNumber(0, 0, 10, 1), "times")
+        .appendField(new Blockly.FieldNumber(1, 0, 10, 1), "times")
         .appendField("times");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);

@@ -27,8 +27,7 @@ Blockly.JavaScript['matrix_bright'] = function(block) {
 Blockly.JavaScript['matrix_scroll'] = function(block) {
   var dropdown_name = block.getFieldValue('NAME');
   var dropdown_speed = block.getFieldValue('speed');
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+  var code = 231 + ',' + dropdown_name + ',' + dropdown_speed + ',';
   return code;
 };
 
