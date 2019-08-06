@@ -109,11 +109,9 @@ Blockly.Blocks['matrix_fill'] = {
 Blockly.Blocks['matrix_fade'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("fade from")
-        .appendField(new Blockly.FieldColour("#ffff33"), "color")
-        .appendField("to black over")
-        .appendField(new Blockly.FieldDropdown([["1","1"], ["2","2"], ["3","3"]]), "seconds")
-        .appendField("seconds");
+        .appendField("fade matrix over")
+        .appendField(new Blockly.FieldDropdown([["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"]]), "seconds")
+        .appendField("second period");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#78909C");

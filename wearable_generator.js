@@ -35,16 +35,13 @@ Blockly.JavaScript['matrix_scroll'] = function(block) {
 
 Blockly.JavaScript['matrix_fill'] = function(block) {
   var colour_color = block.getFieldValue('color');
-  // TODO: Assemble JavaScript into code variable.
   var code = 236 + ',' + pickycolor(colour_color) + ',';
   return code;
 };
 
 Blockly.JavaScript['matrix_fade'] = function(block) {
-  var colour_color = block.getFieldValue('color');
   var dropdown_seconds = block.getFieldValue('seconds');
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+  var code = 235 + ',' + dropdown_seconds + ',';
   return code;
 };
 
