@@ -27,6 +27,18 @@ Blockly.Blocks['serial_data'] = {
 
 //};
 
+Blockly.Blocks['sense_shake'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("cube shaking")
+        .appendField(new Blockly.FieldImage("images/shake.png", 50, 50, "cube shake"));
+    this.setOutput(true, null);
+    this.setColour("#009688");
+ this.setTooltip("Value is TRUE when shaking Code Cube");
+ this.setHelpUrl("");
+  }
+};
+
 Blockly.Blocks['sense_tilt'] = {
   init: function() {
         var input = this.appendDummyInput()
@@ -41,7 +53,7 @@ Blockly.Blocks['sense_tilt'] = {
         input.appendField(new Blockly.FieldDropdown(options), 'tilt');
     this.setOutput(true, null);
     this.setColour("#009688");
-    this.setTooltip("");
+    this.setTooltip("Value is TRUE when Code Cube is tilted in selected direction");
     this.setHelpUrl("");
   }
 };
@@ -58,7 +70,7 @@ Blockly.Blocks['sense_facing'] = {
         input.appendField(new Blockly.FieldDropdown(options), 'facing');
     this.setOutput(true, null);
     this.setColour("#009688");
-    this.setTooltip("");
+    this.setTooltip("Value is TRUE when Code Cube display matrix is facing the selected direction");
     this.setHelpUrl("");
   }
 };

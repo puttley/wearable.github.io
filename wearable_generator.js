@@ -6,6 +6,11 @@ Blockly.JavaScript['serial_data'] = function(block) {
   return code;
 };
 
+Blockly.JavaScript['sense_shake'] = function(block) {
+  var code = 7 + ',';
+  return code;
+};
+
 Blockly.JavaScript['sense_tilt'] = function(block) {
   var dropdown_tilt = block.getFieldValue('tilt');
   var code = dropdown_tilt + ',';
