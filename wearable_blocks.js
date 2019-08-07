@@ -49,6 +49,7 @@ Blockly.Blocks['sense_tilt'] = {
             [{'src': 'images/cube_up_tilt.png', 'width': 50, 'height': 50, 'alt': 'forward'}, '2'],
             [{'src': 'images/cube_down_tilt.png', 'width': 50, 'height': 50, 'alt': 'backward'}, '1']
 
+
         ];
         input.appendField(new Blockly.FieldDropdown(options), 'tilt');
     this.setOutput(true, null);
@@ -72,6 +73,53 @@ Blockly.Blocks['sense_facing'] = {
     this.setColour("#009688");
     this.setTooltip("Value is TRUE when Code Cube display matrix is facing the selected direction");
     this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['exp_show_image'] = {
+  init: function() {
+//    this.appendDummyInput()
+        var input = this.appendDummyInput()
+        .appendField("matrix image")
+        var options = [
+           [{'src': 'images/smiling.png', 'width': 50, 'height': 50, 'alt': 'smiling'}, '0'],
+           [{'src': 'images/crying.png', 'width': 50, 'height': 50, 'alt': 'crying'}, '1'],
+           [{'src': 'images/sad.png', 'width': 50, 'height': 50, 'alt': 'sad'}, '2'],
+           [{'src': 'images/neutral.png', 'width': 50, 'height': 50, 'alt': 'neutral'}, '3'],
+           [{'src': 'images/wink.png', 'width': 50, 'height': 50, 'alt': 'wink'}, '4'],
+           [{'src': 'images/alligator.png', 'width': 50, 'height': 50, 'alt': 'alligator'}, '5'],
+           [{'src': 'images/bird.png', 'width': 50, 'height': 50, 'alt': 'bird'}, '6'],
+           [{'src': 'images/bug.png', 'width': 50, 'height': 50, 'alt': 'bug'}, '7'],
+           [{'src': 'images/cat.png', 'width': 50, 'height': 50, 'alt': 'cat'}, '8'],
+           [{'src': 'images/dog.png', 'width': 50, 'height': 50, 'alt': 'dog'}, '9'],
+           [{'src': 'images/crab.png', 'width': 50, 'height': 50, 'alt': 'crab'}, '10'],
+           [{'src': 'images/duck.png', 'width': 50, 'height': 50, 'alt': 'duck'}, '11'],
+           [{'src': 'images/snake.png', 'width': 50, 'height': 50, 'alt': 'snake'}, '12'],
+           [{'src': 'images/monster1.png', 'width': 50, 'height': 50, 'alt': 'monster1'}, '13'],
+           [{'src': 'images/monster2.png', 'width': 50, 'height': 50, 'alt': 'monster2'}, '14'],
+           [{'src': 'images/monster3.png', 'width': 50, 'height': 50, 'alt': 'monster3'}, '15'],
+           [{'src': 'images/monster4.png', 'width': 50, 'height': 50, 'alt': 'monster4'}, '16'],
+           [{'src': 'images/heart.png', 'width': 50, 'height': 50, 'alt': 'heart'}, '17'],
+           [{'src': 'images/rainbow.png', 'width': 50, 'height': 50, 'alt': 'rainbow'}, '18'],
+           [{'src': 'images/peace.png', 'width': 50, 'height': 50, 'alt': 'peace'}, '19'],
+           [{'src': 'images/girl.png', 'width': 50, 'height': 50, 'alt': 'girl'}, '20'],
+           [{'src': 'images/boy.png', 'width': 50, 'height': 50, 'alt': 'boy'}, '21'],
+           [{'src': 'images/person.png', 'width': 50, 'height': 50, 'alt': 'person'}, '22'],
+           [{'src': 'images/space_ship.png', 'width': 50, 'height': 50, 'alt': 'space_ship'}, '23'],
+           [{'src': 'images/rocket.png', 'width': 50, 'height': 50, 'alt': 'rocket'}, '24'],
+           [{'src': 'images/rock.png', 'width': 50, 'height': 50, 'alt': 'rock'}, '25'],
+           [{'src': 'images/paper.png', 'width': 50, 'height': 50, 'alt': 'paper'}, '26'],
+           [{'src': 'images/scissors.png', 'width': 50, 'height': 50, 'alt': 'scissors'}, '27'],
+           [{'src': 'images/question.png', 'width': 50, 'height': 50, 'alt': 'question'}, '28']
+
+        ];
+        input.appendField(new Blockly.FieldDropdown(options), 'images');
+//        .appendField(new Blockly.FieldDropdown([["heart","150"], ["purple bird","151"], ["smiley face","152"], ["frowny face","153"], ["cry face","154"], ["twitter","155"], ["crab","156"], ["figure","157"], ["random","158"]]), "images");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#78909C");
+ this.setTooltip("");
+ this.setHelpUrl("");
   }
 };
 
@@ -256,24 +304,17 @@ Blockly.Blocks['exp_blink'] = {
   }
 };
 
-Blockly.Blocks['exp_show_image'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField("matrix image")
-        .appendField(new Blockly.FieldDropdown([["heart","150"], ["purple bird","151"], ["smiley face","152"], ["frowny face","153"], ["cry face","154"], ["twitter","155"], ["crab","156"], ["figure","157"], ["random","158"]]), "images");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour("#78909C");
- this.setTooltip("");
- this.setHelpUrl("");
-  }
-};
-
 Blockly.Blocks['exp_character'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("matrix character")
-        .appendField(new Blockly.FieldDropdown([["A","A"], ["B","B"], ["C","C"], ["D","D"], ["E","E"], ["F","F"], ["G","G"], ["H","H"], ["I","I"], ["J","J"], ["K","K"], ["L","L"], ["M","M"], ["N","N"], ["O","O"], ["P","P"], ["Q","Q"], ["R","R"], ["S","S"], ["T","T"], ["U","U"], ["V","V"], ["X","X"], ["Y","Y"], ["Z","Z"]]), "character")
+        .appendField(new Blockly.FieldDropdown([["A","A"], ["B","B"], ["C","C"], ["D","D"], ["E","E"],
+                                               ["F","F"], ["G","G"], ["H","H"], ["I","I"], ["J","J"],
+                                               ["K","K"], ["L","L"], ["M","M"], ["N","N"], ["O","O"],
+                                               ["P","P"], ["Q","Q"], ["R","R"], ["S","S"], ["T","T"],
+                                               ["U","U"], ["V","V"], ["X","X"], ["Y","Y"], ["Z","Z"],
+                                               ["0","0"], ["1","1"], ["2","2"], ["3","3"], ["4","4"],
+                                               ["5","5"], ["6","6"], ["7","7"], ["8","8"], ["9","9"],]), "character")
         .appendField("color")
         .appendField(new Blockly.FieldColour("#ffffff"), "color");
     this.setPreviousStatement(true, null);
