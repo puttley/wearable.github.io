@@ -82,7 +82,7 @@ Blockly.Blocks['exp_show_image'] = {
         var input = this.appendDummyInput()
         .appendField("matrix image")
         var options = [
-           [{'src': 'images/smiling.png', 'width': 50, 'height': 50, 'alt': 'smiling'}, '0'],
+           [{'src': 'images/smiling.png', 'width': 50, 'height': 50, 'alt': 'smiling'}, '150'],
            [{'src': 'images/crying.png', 'width': 50, 'height': 50, 'alt': 'crying'}, '1'],
            [{'src': 'images/sad.png', 'width': 50, 'height': 50, 'alt': 'sad'}, '2'],
            [{'src': 'images/neutral.png', 'width': 50, 'height': 50, 'alt': 'neutral'}, '3'],
