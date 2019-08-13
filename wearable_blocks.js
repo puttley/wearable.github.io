@@ -344,6 +344,7 @@ this.setHelpUrl("");
 onchange: function(ev) {    // disallow nested loops - surround parent of 'x' type not allowed
  if (this.getSurroundParent() != null) {
    var block = this.getSurroundParent();
+   if(block.type == 'cube_if_else') {this.unplug(true);}
    if(block.type == 'exp_if_block') {this.unplug(true);}
    if(block.type == 'exp_repeat') {this.unplug(true);}
   };
@@ -370,7 +371,15 @@ Blockly.Blocks['cube_if_else'] = {
     this.setColour("#5C6BC0");
  this.setTooltip("");
  this.setHelpUrl("");
-  }
+},
+onchange: function(ev) {    // disallow nested loops - surround parent of 'x' type not allowed
+ if (this.getSurroundParent() != null) {
+   var block = this.getSurroundParent();
+   if(block.type == 'cube_if_else') {this.unplug(true);}
+   if(block.type == 'exp_if_block') {this.unplug(true);}
+   if(block.type == 'exp_repeat') {this.unplug(true);}
+  };
+ }
 };
 
 Blockly.Blocks['cube_loop_until'] = {
@@ -387,7 +396,14 @@ Blockly.Blocks['cube_loop_until'] = {
     this.setColour("#5C6BC0");
  this.setTooltip("");
  this.setHelpUrl("");
-  }
+},
+onchange: function(ev) {    // disallow nested loops - surround parent of 'x' type not allowed
+ if (this.getSurroundParent() != null) {
+   var block = this.getSurroundParent();
+   if(block.type == 'cube_loop_until') {this.unplug(true);}
+   if(block.type == 'cube_loop_while') {this.unplug(true);}
+  };
+ }
 };
 
 Blockly.Blocks['cube_loop_while'] = {
@@ -404,7 +420,14 @@ Blockly.Blocks['cube_loop_while'] = {
     this.setColour("#5C6BC0");
  this.setTooltip("");
  this.setHelpUrl("");
-  }
+},
+onchange: function(ev) {    // disallow nested loops - surround parent of 'x' type not allowed
+ if (this.getSurroundParent() != null) {
+   var block = this.getSurroundParent();
+   if(block.type == 'cube_loop_while') {this.unplug(true);}
+   if(block.type == 'cube_loop_until') {this.unplug(true);}
+  };
+ }
 };
 
 Blockly.Blocks['exp_tilt'] = {
