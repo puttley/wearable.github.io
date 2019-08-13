@@ -1,7 +1,8 @@
 let port;
 document.addEventListener('DOMContentLoaded', () => {
 	let connectButton = document.querySelector("#connect");
-	let device = document.querySelector('#device');
+//	let device = document.querySelector('#device');
+  let device = document.querySelector('#device');
 	let text = document.querySelector('#text');
 	let main = document.querySelector('#main');
 	let form = document.querySelector('#form');
@@ -41,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	function connect() {
-		port.connect().then(() => {
+			port.connect().then(() => {
 			device.textContent = '';
 			connectButton.innerHTML = '<b>&times;</b> disconnect';
 
