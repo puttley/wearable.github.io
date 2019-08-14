@@ -316,7 +316,7 @@ Blockly.Blocks['exp_character'] = {
                                                ["0","0"], ["1","1"], ["2","2"], ["3","3"], ["4","4"],
                                                ["5","5"], ["6","6"], ["7","7"], ["8","8"], ["9","9"],]), "character")
         .appendField("color")
-        .appendField(new Blockly.FieldColour("#ffffff"), "color");
+        .appendField(new Blockly.FieldColour("#3366ff"), "color");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#78909C");
