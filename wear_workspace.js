@@ -23,6 +23,7 @@ var options = {
 		maxScale : 3,
 		minScale : 0.3,
 		scaleSpeed : 1.2
+
 	}
 
 };
