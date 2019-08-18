@@ -27,7 +27,7 @@ h1 {
 }
 
 .panel {
-    
+
 
 
 }
@@ -85,6 +85,7 @@ input[type="submit"] {
 }
 
 .error #status {
+    display: none;
     color: red;
 }
 
