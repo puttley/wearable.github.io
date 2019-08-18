@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	connectButton.addEventListener('click', function () {
 		if (port) {
 			port.disconnect();
-			connectButton.textContent = 'connect';
+			connectButton.textContent = 'Connect Cube';
 			device.textContent = '';
 			port = null;
 		} else {
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	function connect() {
 			port.connect().then(() => {
 			device.textContent = '';
-			connectButton.innerHTML = '<b>&times;</b> Disonnect Cube';
+			connectButton.innerHTML = '<b>&times;</b> Disconnect Cube';
 
 			device.innerHTML = `&#x2714; Connected with ${port.device_.productName}.`;
 			device.textContent = 'Connected to Code Cube';
