@@ -85,12 +85,12 @@ input[type="submit"] {
 }
 
 .error #status {
-    display: none;
+
     color: red;
 }
 
 .error #form {
-    display: none;
+/*    display: none; */
 }
 
 .img-header{
