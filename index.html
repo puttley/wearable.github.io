@@ -79,7 +79,7 @@
     <button class ="openButton" onclick="document.getElementById('file-input').click();">Open Blocks</button>
         <input id="file-input" type="file" name="name" onchange="readFiles(this.files)" style="display: none;" />
     <button class ="saveButton" onclick="save()">Save Blocks</button>
-    <button class ="deleteButton" onclick="discard()">Delete All Blocks</button>
+    <button class ="deleteButton" onclick="discard()">Delete Blocks</button>
 
   <!--  <p id="device"></p> -->
     <button id="connect">Connect Cube</button>
@@ -212,6 +212,8 @@
     function sendCode(){
       var code = Blockly.JavaScript.workspaceToCode(workspace);
       const textInput = code;
+      console.log(code);
+      console.log(encodeURI(code).split(/%..|./).length - 1);
   		port.send(new TextEncoder("utf-8").encode(textInput));
     }
 
