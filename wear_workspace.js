@@ -6,7 +6,7 @@ var options = {
 	collapse : true,
 	comments : true,
 	disable : false,
-	maxBlocks : 61,
+	maxBlocks : 100,
 	trashcan : true,
 	horizontalLayout : false,
 	toolboxPosition : 'start',
