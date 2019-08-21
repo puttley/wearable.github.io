@@ -33,7 +33,7 @@ Blockly.Blocks['sense_shake'] = {
         .appendField("cube shake detected")
         .appendField(new Blockly.FieldImage("images/shake.png", 50, 50, "cube shake"));
     this.setOutput(true, null);
-    this.setColour("#009688");
+    this.setColour("#0097A7");
  this.setTooltip("Value is TRUE when shaking Code Cube");
  this.setHelpUrl("");
   }
@@ -53,7 +53,7 @@ Blockly.Blocks['sense_tilt'] = {
         ];
         input.appendField(new Blockly.FieldDropdown(options), 'tilt');
     this.setOutput(true, null);
-    this.setColour("#009688");
+    this.setColour("#0097A7");
     this.setTooltip("Value is TRUE when Code Cube is tilted in selected direction");
     this.setHelpUrl("");
   }
@@ -70,7 +70,7 @@ Blockly.Blocks['sense_facing'] = {
         ];
         input.appendField(new Blockly.FieldDropdown(options), 'facing');
     this.setOutput(true, null);
-    this.setColour("#009688");
+    this.setColour("#0097A7");
     this.setTooltip("Value is TRUE when Code Cube display matrix is facing the selected direction");
     this.setHelpUrl("");
   }
@@ -280,7 +280,7 @@ Blockly.Blocks['exp_repeat'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#5C6BC0");
+    this.setColour("#7B1FA2");
  this.setTooltip("");
  this.setHelpUrl("");
   },
@@ -301,7 +301,7 @@ Blockly.Blocks['exp_blink'] = {
     this.setColour("#BA68C8");
  this.setTooltip("");
  this.setHelpUrl("");
-  }
+ }
 };
 
 Blockly.Blocks['exp_character'] = {
@@ -337,17 +337,10 @@ Blockly.Blocks['exp_if_block'] = {
   this.setInputsInline(true);
   this.setPreviousStatement(true, null);
   this.setNextStatement(true, null);
-  this.setColour("#5C6BC0");
+  this.setColour("#7B1FA2");
 this.setTooltip("");
 this.setHelpUrl("");
- },
-onchange: function(ev) {    // disallow nested loops - surround parent of 'x' type not allowed
- if (this.getSurroundParent() != null) {
-   var block = this.getSurroundParent();
-   if(block.type == 'cube_if_else') {this.unplug(true);}
-   if(block.type == 'exp_if_block') {this.unplug(true);}
-   if(block.type == 'exp_repeat') {this.unplug(true);}
-  };
+
  }
 };
 
@@ -368,7 +361,7 @@ Blockly.Blocks['cube_if_else'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#5C6BC0");
+    this.setColour("#7B1FA2");
  this.setTooltip("");
  this.setHelpUrl("");
 },
@@ -393,7 +386,7 @@ Blockly.Blocks['cube_loop_until'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#5C6BC0");
+    this.setColour("#7B1FA2");
  this.setTooltip("");
  this.setHelpUrl("");
 },
@@ -417,7 +410,7 @@ Blockly.Blocks['cube_loop_while'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#5C6BC0");
+    this.setColour("#7B1FA2");
  this.setTooltip("");
  this.setHelpUrl("");
 },
@@ -436,7 +429,7 @@ Blockly.Blocks['exp_tilt'] = {
         .appendField("cube tilting")
         .appendField(new Blockly.FieldDropdown([["left","3"], ["right","4"], ["front","1"], ["back","2"]]), "tilt");
     this.setOutput(true, null);
-    this.setColour("#009688");
+    this.setColour("#0097A7");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -448,7 +441,7 @@ Blockly.Blocks['exp_is'] = {
         .appendField("matrix is facing")
         .appendField(new Blockly.FieldDropdown([["up (level)","5"], ["down (upside down)","6"]]), "is");
     this.setOutput(true, null);
-    this.setColour("#009688");
+    this.setColour("#0097A7");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -462,7 +455,7 @@ Blockly.Blocks['exp_delay'] = {
         .appendField("seconds");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#5C6BC0");
+    this.setColour("#7B1FA2");
  this.setTooltip("");
  this.setHelpUrl("");
  this.setFieldValue("1", "seconds");  // default check mark is 1 second
@@ -493,7 +486,7 @@ Blockly.Blocks['cube_wait_until'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#5C6BC0");
+    this.setColour("#7B1FA2");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -533,7 +526,7 @@ Blockly.Blocks['exp_start'] = {
     //    .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"));
         .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"));
     this.setNextStatement(true, null);
-    this.setColour("#5C6BC0");
+    this.setColour("#7B1FA2");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -544,7 +537,7 @@ Blockly.Blocks['exp_end'] = {
     this.appendDummyInput()
         .appendField("end program");
     this.setPreviousStatement(true, null);
-    this.setColour("#5C6BC0");
+    this.setColour("#7B1FA2");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -558,7 +551,7 @@ Blockly.Blocks['exp_sound'] = {
         .appendField("until done");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#C2185B");
+    this.setColour("#D81B60");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -585,7 +578,7 @@ Blockly.Blocks['exp_tone'] = {
         .appendField("seconds");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#C2185B");
+    this.setColour("#D81B60");
  this.setTooltip("");
  this.setHelpUrl("");
  this.setFieldValue("1", "duration");  // default check mark is 1 second
@@ -607,7 +600,7 @@ Blockly.Blocks['exp_note'] = {
         .appendField("seconds");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#C2185B");
+    this.setColour("#D81B60");
  this.setTooltip("");
  this.setHelpUrl("");
  this.setFieldValue("1", "duration");  // default check mark is 1 second
