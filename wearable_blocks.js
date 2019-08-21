@@ -524,7 +524,7 @@ Blockly.Blocks['exp_start'] = {
     this.appendDummyInput()
         .appendField("on program start")
     //    .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"));
-        .appendField(new Blockly.FieldImage("images/progress.gif", 15, 15, "*"));
+        .appendField(new Blockly.FieldImage("images/start.gif", 25, 25, "*"));
     this.setNextStatement(true, null);
     this.setColour("#7B1FA2");
  this.setTooltip("");
@@ -551,7 +551,7 @@ Blockly.Blocks['exp_sound'] = {
         .appendField("until done");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#D81B60");
+    this.setColour("#388E3C");
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -578,7 +578,7 @@ Blockly.Blocks['exp_tone'] = {
         .appendField("seconds");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#D81B60");
+    this.setColour("#388E3C");
  this.setTooltip("");
  this.setHelpUrl("");
  this.setFieldValue("1", "duration");  // default check mark is 1 second
@@ -600,7 +600,7 @@ Blockly.Blocks['exp_note'] = {
         .appendField("seconds");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("#D81B60");
+    this.setColour("#388E3C");
  this.setTooltip("");
  this.setHelpUrl("");
  this.setFieldValue("1", "duration");  // default check mark is 1 second
