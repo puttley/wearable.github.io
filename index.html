@@ -72,17 +72,20 @@
 
 <!--    <button onclick="showCode()">Show Code</button> -->
     <button class ="sendButton" onclick="sendCode()">Send Code</button>
-<!--    <button onclick="importCode()">Import Code</button> -->
-<!--    <button onclick="exportCode()">Export Code</button> -->
-    <button class ="saveSessionButton" onclick="backup_blocks()">Save Session</button>
-    <button class ="restoreSessionButton" onclick="restore_blocks()">Restore Session</button>
+    <button id="connect">Connect Cube</button>
     <button class ="openButton" onclick="document.getElementById('file-input').click();">Open Blocks</button>
-        <input id="file-input" type="file" name="name" onchange="readFiles(this.files)" style="display: none;" />
+    <input id="file-input" type="file" name="name" onchange="readFiles(this.files)" style="display: none;" />
     <button class ="saveButton" onclick="save()">Save Blocks</button>
     <button class ="deleteButton" onclick="discard()">Delete Blocks</button>
+    <button class ="saveSessionButton" onclick="backup_blocks()">Save Session</button>
+    <button class ="restoreSessionButton" onclick="restore_blocks()">Restore Session</button>
+
+    <!--    <button onclick="importCode()">Import Code</button> -->
+    <!--    <button onclick="exportCode()">Export Code</button> -->
+
 
   <!--  <p id="device"></p> -->
-    <button id="connect">Connect Cube</button>
+
 
 
   </p>

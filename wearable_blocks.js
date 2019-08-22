@@ -44,10 +44,10 @@ Blockly.Blocks['sense_tilt'] = {
         var input = this.appendDummyInput()
         .appendField('cube tilting');
         var options = [
-            [{'src': 'images/cube_left_tilt.png', 'width': 50, 'height': 50, 'alt': 'left'}, '3'],
-            [{'src': 'images/cube_right_tilt.png', 'width': 50, 'height': 50, 'alt': 'right'}, '4'],
-            [{'src': 'images/cube_up_tilt.png', 'width': 50, 'height': 50, 'alt': 'forward'}, '2'],
-            [{'src': 'images/cube_down_tilt.png', 'width': 50, 'height': 50, 'alt': 'backward'}, '1']
+            [{'src': 'images/tilt_left.png', 'width': 50, 'height': 50, 'alt': 'left'}, '3'],
+            [{'src': 'images/tilt_right.png', 'width': 50, 'height': 50, 'alt': 'right'}, '4'],
+            [{'src': 'images/tilt_up.png', 'width': 50, 'height': 50, 'alt': 'forward'}, '2'],
+            [{'src': 'images/tilt_down.png', 'width': 50, 'height': 50, 'alt': 'backward'}, '1']
 
 
         ];
@@ -64,8 +64,8 @@ Blockly.Blocks['sense_facing'] = {
         var input = this.appendDummyInput()
         .appendField('cube facing');
         var options = [
-            [{'src': 'images/cube_faceup.png', 'width': 50, 'height': 50, 'alt': 'up'}, '5'],
-            [{'src': 'images/cube_facedown.png', 'width': 50, 'height': 50, 'alt': 'down'}, '6']
+            [{'src': 'images/face_up.png', 'width': 50, 'height': 50, 'alt': 'up'}, '5'],
+            [{'src': 'images/face_down.png', 'width': 50, 'height': 50, 'alt': 'down'}, '6']
 
         ];
         input.appendField(new Blockly.FieldDropdown(options), 'facing');
@@ -82,6 +82,7 @@ Blockly.Blocks['exp_show_image'] = {
         var input = this.appendDummyInput()
         .appendField("matrix image")
         var options = [
+           [{'src': 'images/default.png', 'width': 50, 'height': 50, 'alt': 'colorful'}, '0'],
            [{'src': 'images/smiling.png', 'width': 50, 'height': 50, 'alt': 'smiling'}, '101'],
            [{'src': 'images/crying.png', 'width': 50, 'height': 50, 'alt': 'crying'}, '102'],
            [{'src': 'images/sad.png', 'width': 50, 'height': 50, 'alt': 'sad'}, '103'],
@@ -110,7 +111,8 @@ Blockly.Blocks['exp_show_image'] = {
            [{'src': 'images/rock.png', 'width': 50, 'height': 50, 'alt': 'rock'}, '126'],
            [{'src': 'images/paper.png', 'width': 50, 'height': 50, 'alt': 'paper'}, '127'],
            [{'src': 'images/scissors.png', 'width': 50, 'height': 50, 'alt': 'scissors'}, '128'],
-           [{'src': 'images/question.png', 'width': 50, 'height': 50, 'alt': 'question'}, '129']
+           [{'src': 'images/question.png', 'width': 50, 'height': 50, 'alt': 'question'}, '129'],
+           [{'src': 'images/flag.png', 'width': 50, 'height': 50, 'alt': 'flag'}, '130']
 
         ];
         input.appendField(new Blockly.FieldDropdown(options), 'images');
