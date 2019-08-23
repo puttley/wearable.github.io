@@ -61,13 +61,14 @@
 <!--    <p>Message:</p>
     <input type="text" id="text" autofocus required autocapitalize maxlength="100">
         <input type="submit" value="send"> -->
-
     </form>
+
   </section>
 
 </main>
 
 <p id="device"></p>
+
   <p>
 
 <!--    <button onclick="showCode()">Show Code</button> -->
@@ -94,8 +95,8 @@
 
 <!-- <div id="blocklyDiv" style="height: 640px; width: 100%;"></div> -->
 
-<div id="blocklyDiv" style="height: 68vh; width: 95%; margin-bottom: 5px;"></div>
-<div id="insert"></div>
+<div id="blocklyDiv" style="height: 72vh; width: 95%; margin-bottom: 5px;"></div>
+<div id="memory"></div>
 
   <xml id="toolbox" style="display: none">
 
@@ -232,9 +233,9 @@
       var size = byteArray.length - 1;
       var memPercent = (size / 650) * 100;
         if(memPercent <= 100){
-        document.getElementById("insert").innerHTML = "Program uses" + " " + ~~memPercent + "%" + " " + "of Code Cube memory space.";
+        document.getElementById("memory").innerHTML = "Program uses" + " " + ~~memPercent + "%" + " " + "of Code Cube memory space.";
         }else{
-        document.getElementById("insert").innerHTML = "Out of Memory! Program is too large.";
+        document.getElementById("memory").innerHTML = "Out of Memory! Program is too large.";
         }
     }
 

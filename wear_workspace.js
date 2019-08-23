@@ -42,7 +42,7 @@ var options = {
 // Load up the exp_start block when hitting the URL
 Blockly.mainWorkspace.clear();
 Blockly.mainWorkspace.addChangeListener(Blockly.Events.disableOrphans);
-var xml = '<xml><block type="exp_start" deletable="true" movable="true"></block></xml>';  // add default block back
+var xml = '<xml><block type="exp_start" deletable="false" movable="true"></block></xml>';  // add default block back
 Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(xml), workspace);
 renderContent();
 
