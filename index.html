@@ -216,11 +216,11 @@
     function sendCode(){
       var code = Blockly.JavaScript.workspaceToCode(workspace);
       const textInput = code;
-    //  console.log(code);
+      console.log(code);
       port.send(new TextEncoder("utf-8").encode(textInput));
     }
 
-  //  setInterval(function(){memoryspace();}, 1000);    // set up a 1 second timer to call memoryspace
+    setInterval(function(){memoryspace();}, 1000);    // set up a 1 second timer to call memoryspace
 
 
     function memoryspace(){
@@ -228,8 +228,8 @@
       var byteArray = bytes.split(",");                           // split out the commas
       var i = byteArray.length;
       while(i--) !/\S/.test(byteArray[i]) && byteArray.splice(i, 1);  // chuck out the whitespace elements
-      console.log(byteArray);
-      console.log(byteArray.length - 1);  // first element, start marker get's ignored - it's not stored
+  //    console.log(byteArray);
+  //    console.log(byteArray.length - 1);  // first element, start marker get's ignored - it's not stored
       var size = byteArray.length - 1;
       var memPercent = (size / 650) * 100;
         if(memPercent <= 100){
