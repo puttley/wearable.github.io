@@ -216,7 +216,7 @@
     function sendCode(){
       var code = Blockly.JavaScript.workspaceToCode(workspace);
       const textInput = code;
-      console.log(code);
+    //  console.log(code);
       port.send(new TextEncoder("utf-8").encode(textInput));
     }
 
