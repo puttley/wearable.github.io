@@ -1,3 +1,4 @@
+
 Blockly.Blocks['serial_data'] = {
   init: function() {
     this.appendDummyInput()
@@ -81,8 +82,8 @@ Blockly.Blocks['exp_show_image'] = {
 //    this.appendDummyInput()
         var input = this.appendDummyInput()
         .appendField("matrix image")
+        .appendField(new Blockly.FieldImage("images/default.png", 25, 25, "matrix image"));
         var options = [
-           [{'src': 'images/default.png', 'width': 50, 'height': 50, 'alt': 'colorful'}, '0'],
            [{'src': 'images/smiling.png', 'width': 50, 'height': 50, 'alt': 'smiling'}, '101'],
            [{'src': 'images/crying.png', 'width': 50, 'height': 50, 'alt': 'crying'}, '102'],
            [{'src': 'images/sad.png', 'width': 50, 'height': 50, 'alt': 'sad'}, '103'],
@@ -209,6 +210,7 @@ Blockly.Blocks['matrix_flash'] = {
  this.setTooltip("");
  this.setHelpUrl("");
   }
+
 };
 
 Blockly.Blocks['matrix_clear'] = {

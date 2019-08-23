@@ -94,8 +94,8 @@
 
 <!-- <div id="blocklyDiv" style="height: 640px; width: 100%;"></div> -->
 
-<div id="blocklyDiv" style="height: 70vh; width: 95%; margin-bottom: 20px;"></div>
-<!-- <div style="height: 20px; width: 100%;"></div> -->
+<div id="blocklyDiv" style="height: 68vh; width: 95%; margin-bottom: 5px;"></div>
+<div id="insert"></div>
 
   <xml id="toolbox" style="display: none">
 
@@ -216,9 +216,28 @@
       var code = Blockly.JavaScript.workspaceToCode(workspace);
       const textInput = code;
       console.log(code);
-      console.log(encodeURI(code).split(/%..|./).length - 1);
-  		port.send(new TextEncoder("utf-8").encode(textInput));
+      port.send(new TextEncoder("utf-8").encode(textInput));
     }
+
+    setInterval(function(){memoryspace();}, 1000);    // set up a 1 second timer to call memoryspace
+
+
+    function memoryspace(){
+      var bytes = Blockly.JavaScript.workspaceToCode(workspace);  // get number of bytes on workspace
+      var byteArray = bytes.split(",");                           // split out the commas
+      var i = byteArray.length;
+      while(i--) !/\S/.test(byteArray[i]) && byteArray.splice(i, 1);  // chuck out the whitespace elements
+      console.log(byteArray);
+      console.log(byteArray.length - 1);  // first element, start marker get's ignored - it's not stored
+      var size = byteArray.length - 1;
+      var memPercent = (size / 650) * 100;
+        if(memPercent <= 100){
+        document.getElementById("insert").innerHTML = "Program uses" + " " + ~~memPercent + "%" + " " + "of Code Cube memory space.";
+        }else{
+        document.getElementById("insert").innerHTML = "Out of Memory! Program is too large.";
+        }
+    }
+
 
     function runCode() {
       // Generate JavaScript code and run it.

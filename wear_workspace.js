@@ -6,7 +6,7 @@ var options = {
 	collapse : true,
 	comments : true,
 	disable : false,
-	maxBlocks : 100,
+	maxBlocks : 500,
 	trashcan : true,
 	horizontalLayout : false,
 	toolboxPosition : 'start',
@@ -19,9 +19,9 @@ var options = {
 	zoom : {
 		controls : true,
 		wheel : true,
-		startScale : 0.9,
+		startScale : 0.7,
 		maxScale : 3,
-		minScale : 0.3,
+		minScale : 0.2,
 		scaleSpeed : 1.2
 
 	}

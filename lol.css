@@ -159,9 +159,14 @@ input[type="submit"] {
 div#blocklyDiv .blocklyToolboxDiv {
     background-color: #263238;
     color: #607D8B;
-
     font-weight: bold;
+}
 
-
-
+#insert{
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-left: 100px;
+  margin-top:  10px;
+  margin-bottom: 10px;
 }
