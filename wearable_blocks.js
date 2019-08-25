@@ -82,8 +82,9 @@ Blockly.Blocks['exp_show_image'] = {
 //    this.appendDummyInput()
         var input = this.appendDummyInput()
         .appendField("matrix image")
-        .appendField(new Blockly.FieldImage("images/default.png", 25, 25, "matrix image"));
+      //  .appendField(new Blockly.FieldImage("images/default.png", 25, 25, "matrix image"));
         var options = [
+           [{'src': 'images/default.png', 'width': 50, 'height': 50, 'alt': 'smiling'}, '131'],
            [{'src': 'images/smiling.png', 'width': 50, 'height': 50, 'alt': 'smiling'}, '101'],
            [{'src': 'images/crying.png', 'width': 50, 'height': 50, 'alt': 'crying'}, '102'],
            [{'src': 'images/sad.png', 'width': 50, 'height': 50, 'alt': 'sad'}, '103'],
@@ -551,7 +552,17 @@ Blockly.Blocks['exp_sound'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("play sound")
-        .appendField(new Blockly.FieldDropdown([["space sound 1","1"], ["space sound 2","2"], ["random beep","3"]]), "sounds")
+        .appendField(new Blockly.FieldDropdown([["space ship 1","1"],
+                                                ["space ship 2","2"],
+                                                ["siren","3"],
+                                                ["phaser","4"],
+                                                ["robot","5"],
+                                                ["squeak","6"],
+                                                ["robot","7"],
+                                                ["waka waka","8"],
+                                                ["slide whistle","9"],
+                                                ["ohh !","10"],
+                                                ["random tune","11"]]), "sounds")
         .appendField("until done");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -598,7 +609,7 @@ Blockly.Blocks['exp_note'] = {
                                                ["E4","17"], ["F4","18"], ["F#4","19"], ["G4","20"], ["G#4","21"], ["A4","22"], ["A#4","23"], ["B4","24"], ["C5","25"],
                                                ["C#5","26"], ["D5","27"], ["D#5","28"], ["E5","29"], ["F5","30"], ["F#5","31"], ["G5","32"], ["G#5","33"], ["A5","34"],
                                                ["A#5","35"], ["B5","36"], ["C6","37"], ["C#6","38"], ["D6","39"], ["D#6","40"], ["E6","41"], ["F6","42"], ["F#6","43"], ["G6","44"],
-                                               ["G#6","45"], ["A6","46"], ["A#6","47"], ["B6","48"], ["C7","49"]]), "sounds")
+                                               ["G#6","45"], ["A6","46"], ["A#6","47"], ["B6","48"], ["C7","49"], ["random note","50"]]), "sounds")
         .appendField("for")
         .appendField(new Blockly.FieldDropdown([["0.25","25"], ["0.5","50"], ["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"]]), "duration")
         .appendField("seconds");
