@@ -548,6 +548,17 @@ Blockly.Blocks['exp_end'] = {
   }
 };
 
+Blockly.Blocks['new_blocks_tree'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("new blocks tree (continue program)");
+    this.setNextStatement(true, null);
+    this.setColour("#7B1FA2");
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
 Blockly.Blocks['exp_sound'] = {
   init: function() {
     this.appendDummyInput()

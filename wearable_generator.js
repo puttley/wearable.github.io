@@ -206,6 +206,12 @@ Blockly.JavaScript['exp_start'] = function(block) {
   return code;
 };
 
+Blockly.JavaScript['new_blocks_tree'] = function(block) {
+  // TODO: Assemble JavaScript into code variable.
+  //var code = '...;\n';
+  //return code;
+};
+
 Blockly.JavaScript['exp_end'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
   var code = 255 + ',';
