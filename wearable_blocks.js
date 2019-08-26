@@ -570,9 +570,12 @@ Blockly.Blocks['exp_sound'] = {
                                                 ["robot","5"],
                                                 ["squeak","6"],
                                                 ["waka waka","7"],
-                                                ["slide whistle","8"],
-                                                ["ohh !","9"],
-                                                ["random tune","10"]]), "sounds")
+                                                ["slide up whistle","8"],
+                                                ["slide down whistle","9"],
+                                                ["oh!","10"],
+                                                ["correct!","11"],
+                                                ["try again!","12"],
+                                                ["random tune","13"]]), "sounds")
         .appendField("until done");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
