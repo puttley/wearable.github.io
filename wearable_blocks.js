@@ -536,10 +536,6 @@ Blockly.Blocks['exp_start'] = {
     this.setColour("#7B1FA2");
  this.setTooltip("");
  this.setHelpUrl("");
-},
-onchange: function(ev) {
-  //  {toolbox: document.getElementById('toolbox'),maxBlocks: {'exp_start': 1}};
-  //  Blockly.getElementById('toolbox'), maxInstances: {'exp_start': 1};
  }
 };
 
@@ -578,9 +574,9 @@ Blockly.Blocks['exp_sound'] = {
                                                 ["waka waka","7"],
                                                 ["slide up whistle","8"],
                                                 ["slide down whistle","9"],
-                                                ["oh!","10"],
-                                                ["correct!","11"],
-                                                ["try again!","12"],
+                                                ["oh !","10"],
+                                                ["correct !","11"],
+                                                ["try again...","12"],
                                                 ["random tune","13"]]), "sounds")
         .appendField("until done");
     this.setPreviousStatement(true, null);
