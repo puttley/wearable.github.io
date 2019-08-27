@@ -24,16 +24,13 @@ var options = {
 		minScale : 0.2,
 		scaleSpeed : 1.2
 
+
 	}
 
 };
 
 /* Inject your workspace */
  	var workspace = Blockly.inject('blocklyDiv', options);
-
-
-
-
 
 /* Load Workspace Blocks from XML to workspace. Remove all code below if no blocks to load */
 //var xml = '<xml><block type="frame_strip_15" deletable="true" movable="true"></block></xml>';
@@ -45,6 +42,7 @@ Blockly.mainWorkspace.addChangeListener(Blockly.Events.disableOrphans);
 var xml = '<xml><block type="exp_start" movable="true"></block></xml>';  // add default block back
 Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(xml), workspace);
 renderContent();
+
 
 /* TODO: Change workspace blocks XML ID if necessary. Can export workspace blocks XML from Workspace Factory. */
 var workspaceBlocks = document.getElementById("workspaceBlocks");

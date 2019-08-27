@@ -113,11 +113,11 @@ Blockly.Blocks['exp_show_image'] = {
            [{'src': 'images/scissors.png', 'width': 50, 'height': 50, 'alt': 'scissors'}, '126'],
            [{'src': 'images/question.png', 'width': 50, 'height': 50, 'alt': 'question'}, '127'],
            [{'src': 'images/flag.png', 'width': 50, 'height': 50, 'alt': 'flag'}, '128'],
-           [{'src': 'images/Arrow-Left.png', 'width': 50, 'height': 50, 'alt': 'flag'}, '129'],
-           [{'src': 'images/Arrow-Right.png', 'width': 50, 'height': 50, 'alt': 'flag'}, '130'],
-           [{'src': 'images/Arrow-Up.png', 'width': 50, 'height': 50, 'alt': 'flag'}, '131'],
-           [{'src': 'images/Arrow-Down.png', 'width': 50, 'height': 50, 'alt': 'flag'}, '132'],
-
+           [{'src': 'images/Arrow-Left.png', 'width': 50, 'height': 50, 'alt': 'left arrow'}, '129'],
+           [{'src': 'images/Arrow-Right.png', 'width': 50, 'height': 50, 'alt': 'right arrow'}, '130'],
+           [{'src': 'images/Arrow-Up.png', 'width': 50, 'height': 50, 'alt': 'up arrow'}, '131'],
+           [{'src': 'images/Arrow-Down.png', 'width': 50, 'height': 50, 'alt': 'down arrow'}, '132'],
+           [{'src': 'images/random-1.png', 'width': 50, 'height': 50, 'alt': 'random image'}, '134'],
         ];
         input.appendField(new Blockly.FieldDropdown(options), 'images');
 //        .appendField(new Blockly.FieldDropdown([["heart","150"], ["purple bird","151"], ["smiley face","152"], ["frowny face","153"], ["cry face","154"], ["twitter","155"], ["crab","156"], ["figure","157"], ["random","158"]]), "images");
@@ -321,7 +321,7 @@ Blockly.Blocks['exp_character'] = {
                                                ["P","P"], ["Q","Q"], ["R","R"], ["S","S"], ["T","T"],
                                                ["U","U"], ["V","V"], ["W","W"], ["X","X"], ["Y","Y"], ["Z","Z"],
                                                ["0","0"], ["1","1"], ["2","2"], ["3","3"], ["4","4"],
-                                               ["5","5"], ["6","6"], ["7","7"], ["8","8"], ["9","9"],]), "character")
+                                               ["5","5"], ["6","6"], ["7","7"], ["8","8"], ["9","9"], ["random (0-9)","/"],]), "character")
         .appendField("color")
         .appendField(new Blockly.FieldColour("#3366ff"), "color");
     this.setPreviousStatement(true, null);
@@ -536,7 +536,11 @@ Blockly.Blocks['exp_start'] = {
     this.setColour("#7B1FA2");
  this.setTooltip("");
  this.setHelpUrl("");
-  }
+},
+onchange: function(ev) {
+  //  {toolbox: document.getElementById('toolbox'),maxBlocks: {'exp_start': 1}};
+  //  Blockly.getElementById('toolbox'), maxInstances: {'exp_start': 1};
+ }
 };
 
 Blockly.Blocks['exp_end'] = {
@@ -553,7 +557,7 @@ Blockly.Blocks['exp_end'] = {
 Blockly.Blocks['new_blocks_tree'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("new blocks tree (continue program)");
+        .appendField("new block column");
     this.setNextStatement(true, null);
     this.setColour("#7B1FA2");
  this.setTooltip("");
@@ -565,8 +569,8 @@ Blockly.Blocks['exp_sound'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("play sound")
-        .appendField(new Blockly.FieldDropdown([["space ship 1","1"],
-                                                ["space ship 2","2"],
+        .appendField(new Blockly.FieldDropdown([["space sound 1","1"],
+                                                ["space sound 2","2"],
                                                 ["siren","3"],
                                                 ["phaser","4"],
                                                 ["robot","5"],
