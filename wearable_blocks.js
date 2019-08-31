@@ -279,7 +279,7 @@ Blockly.Blocks['exp_repeat'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("repeat")
-        .appendField(new Blockly.FieldNumber(5, 1, 99, 1), "repeat");
+        .appendField(new Blockly.FieldNumber(5, 1, 9999, 1), "repeat");
     this.appendDummyInput()
         .appendField("times");
     this.appendStatementInput("repeat_loop")
