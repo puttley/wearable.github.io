@@ -12,6 +12,7 @@ var serial = {};
 	serial.requestPort = function() {
 
 		const filters = [
+			{ 'vendorId': 0x21FA, 'productId': 0xFFFF },	// CODE CUBE VID/PID
 			{ 'vendorId': 0x2341, 'productId': 0x8036 },
 			{ 'vendorId': 0x2341, 'productId': 0x8037 },
 			{ 'vendorId': 0x2341, 'productId': 0x804d },
