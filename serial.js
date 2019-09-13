@@ -33,6 +33,7 @@ var serial = {};
 		let readLoop = () => {
 			this.device_.transferIn(5, 64).then(result => {
 				this.onReceive(result.data);
+				console.log(text.data);
 			readLoop();
 		}, error => {
 				this.onReceiveError(error);
