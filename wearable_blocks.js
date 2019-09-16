@@ -458,7 +458,7 @@ Blockly.Blocks['exp_delay'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("pause for")
-        .appendField(new Blockly.FieldDropdown([["0.25","25"], ["0.5","50"], ["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"], ["6","6"], ["7","7"], ["8","8"], ["9","9"], ["10","10"]]), "seconds")
+        .appendField(new Blockly.FieldDropdown([["0.1","100"], ["0.25","25"], ["0.5","50"], ["1","1"], ["2","2"], ["3","3"], ["4","4"], ["5","5"], ["6","6"], ["7","7"], ["8","8"], ["9","9"], ["10","10"]]), "seconds")
         .appendField("seconds");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
