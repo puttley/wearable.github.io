@@ -348,6 +348,14 @@ Blockly.Blocks['exp_if_block'] = {
 this.setTooltip("");
 this.setHelpUrl("");
 
+},
+onchange: function(ev) {    // disallow nested loops - surround parent of 'x' type not allowed
+ if (this.getSurroundParent() != null) {
+   var block = this.getSurroundParent();
+   if(block.type == 'cube_if_else') {this.unplug(true);}
+   if(block.type == 'exp_if_block') {this.unplug(true);}
+   if(block.type == 'exp_repeat') {this.unplug(true);}
+  };
  }
 };
 
