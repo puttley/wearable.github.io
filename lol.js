@@ -62,10 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
 				main.classList.add('error');
 			};
 
-	//  Bottom three lines disabled by Paul - disables timer from pinging serial every 200ms
-			timer = setInterval(() => {
-				port.send(new TextEncoder("utf-8").encode("\n"));
-			}, 1000);
+	//  Bottom three lines disabled by Paul - disables timer from pinging serial every 1000ms
+	//		timer = setInterval(() => {
+	//			port.send(new TextEncoder("utf-8").encode("\n"));
+	//		}, 1000);
 
 		}, error => {
 			device.textContent = error;
