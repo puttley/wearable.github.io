@@ -51,7 +51,7 @@ function saveCode() {
 function save() {
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var data = Blockly.Xml.domToText(xml);
-  var fileName = window.prompt('What would you like to name your file?', 'Wearable');
+  var fileName = window.prompt('What would you like to name your file?', 'Cube');
   // Store data in blob.
   // var builder = new BlobBuilder();
   // builder.append(data);
@@ -176,7 +176,7 @@ function onSuccess() {
         return;
       }
       var count = Blockly.mainWorkspace.getAllBlocks().length;
-      if (count && confirm('Replace existing blocks?\n"Cancel" will merge.')) {
+      if (count && confirm('Replace existing blocks?\n"Cancel" will merge blocks.')) {
         Blockly.mainWorkspace.clear();
       }
       Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
