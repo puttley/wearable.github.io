@@ -150,6 +150,8 @@
 
   <script>
 
+    auto_save_and_restore_blocks();   // triggers a save session when app is unloaded
+
     function readFiles(){
       var files = event.target.files;
       // Only allow uploading one file.
@@ -255,7 +257,6 @@
       }
     }
 
-    auto_save_and_restore_blocks();
 
   </script>
 
