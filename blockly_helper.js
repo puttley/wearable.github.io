@@ -123,10 +123,10 @@ function auto_save_and_restore_blocks() {
   tabClick(selected);
 
   // Init load event.
-//  var loadInput = document.getElementById('load');
-//  loadInput.addEventListener('change', load, false);
-//  document.getElementById('fakeload').onclick = function() {
-//    loadInput.click();
+  var loadInput = document.getElementById('load');
+  loadInput.addEventListener('change', load, false);
+  document.getElementById('fakeload').onclick = function() {
+  loadInput.click();
   };
 }
 
