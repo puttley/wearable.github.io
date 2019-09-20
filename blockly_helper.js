@@ -25,8 +25,9 @@ function backup_blocks() {
  * Restore code blocks from localStorage.
  */
 function restore_blocks() {
-  if (window.confirm('Restore Workspace?')) {
+
   if ('localStorage' in window && window.localStorage.arduino) {
+    if (window.confirm('Restore Workspace?')) {
     Blockly.mainWorkspace.clear();  // clear the workspace
     var xml = Blockly.Xml.textToDom(window.localStorage.arduino);
     Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
