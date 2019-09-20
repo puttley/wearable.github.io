@@ -25,13 +25,13 @@ function backup_blocks() {
  * Restore code blocks from localStorage.
  */
 function restore_blocks() {
-  if (window.confirm('Restore Work?')) {
+//  if (window.confirm('Restore Work?')) {
   if ('localStorage' in window && window.localStorage.arduino) {
     Blockly.mainWorkspace.clear();  // clear the workspace
     var xml = Blockly.Xml.textToDom(window.localStorage.arduino);
     Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
   }
- }
+// }
 }
 
 /**
