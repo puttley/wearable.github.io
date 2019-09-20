@@ -25,11 +25,13 @@ function backup_blocks() {
  * Restore code blocks from localStorage.
  */
 function restore_blocks() {
+  if (window.confirm('Restore Workspace?')) {
   if ('localStorage' in window && window.localStorage.arduino) {
     Blockly.mainWorkspace.clear();  // clear the workspace
     var xml = Blockly.Xml.textToDom(window.localStorage.arduino);
     Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
   }
+ }
 }
 
 /**
@@ -85,7 +87,7 @@ function load(event) {
         return;
       }
       var count = Blockly.mainWorkspace.getAllBlocks().length;
-      if (count && confirm('Replace existing blocks?\n"Cancel" will merge.')) {
+      if (count && confirm('Replace existing blocks?\n"Cancel" will merge blocks.')) {
         Blockly.mainWorkspace.clear();
       }
       Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);

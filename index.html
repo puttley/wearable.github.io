@@ -78,8 +78,8 @@
     <input id="file-input" type="file" name="name" onchange="readFiles(this.files)" style="display: none;" />
     <button class ="saveButton" onclick="save()">Save Blocks</button>
     <button class ="deleteButton" onclick="discard()">Delete Blocks</button>
-    <button class ="saveSessionButton" onclick="backup_blocks()">Save Session</button>
-    <button class ="restoreSessionButton" onclick="restore_blocks()">Restore Session</button>
+    <button class ="restoreSessionButton" onclick="restore_blocks()">Restore Workspace</button>
+<!--    <button class ="saveSessionButton" onclick="backup_blocks()">Save Session</button> -->
 
     <!--    <button onclick="importCode()">Import Code</button> -->
     <!--    <button onclick="exportCode()">Export Code</button> -->
@@ -150,8 +150,8 @@
 
   <script>
 
-//    auto_save_and_restore_blocks();   // triggers a save session when app is unloaded
-                                        // enable to have the app automatically save a session
+    auto_save_and_restore_blocks();       // triggers a save session when app is unloaded
+                                          // enable to have the app automatically save a session
     function readFiles(){
       var files = event.target.files;
       // Only allow uploading one file.
