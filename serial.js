@@ -36,8 +36,6 @@ var serial = {};
 			readLoop();
 		}, error => {
 				this.onReceiveError(error);
-				console.log('1');
-
 			});
 		};
 
@@ -45,7 +43,6 @@ var serial = {};
 			.then(() => {
 			if (this.device_.configuration === null) {
 			return this.device_.selectConfiguration(1);
-			console.log('2');
 		}
 	})
 	.then(() => this.device_.claimInterface(2))
@@ -57,12 +54,12 @@ var serial = {};
 			'value': 0x01,
 			'index': 0x02}))
 	.then(() => {
+		  console.log('1');
 			readLoop();
 	});
 	};
 
 	serial.Port.prototype.disconnect = function() {
-		console.log('3');
 		return this.device_.controlTransferOut({
 			'requestType': 'class',
 			'recipient': 'interface',
@@ -73,7 +70,6 @@ var serial = {};
 	};
 
 	serial.Port.prototype.send = function(data) {
-		console.log('4');
 		return this.device_.transferOut(4, data);
 	};
 })();
