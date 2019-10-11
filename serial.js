@@ -59,6 +59,7 @@ var serial = {};
 	};
 
 	serial.Port.prototype.disconnect = function() {
+		console.log('disconnect');
 		return this.device_.controlTransferOut({
 			'requestType': 'class',
 			'recipient': 'interface',
@@ -66,7 +67,6 @@ var serial = {};
 			'value': 0x00,
 			'index': 0x02})
 			.then(() => this.device_.close());
-			console.log('error');
 	};
 
 	serial.Port.prototype.send = function(data) {
