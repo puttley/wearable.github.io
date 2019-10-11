@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
 				connect();
 			}).catch(error => {
 	//			device.textContent = error;
-				device.textContent = 'Code Cube not Connected...';
+				device.textContent = 'Code Cube not Connected...';	// show this instead of Chrome error
+				connect();  // click disconnect
 			});
 		}
 	});
@@ -53,13 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			port.onReceive = data => {
 				let textDecoder = new TextDecoder();
-	//	  text.value = textDecoder.decode(data).trim();
-				var serial = textDecoder.decode(data).trim();	   // debug for code cube
-				console.log(serial);
+	 	    text.value = textDecoder.decode(data).trim();
+		//	var serial = textDecoder.decode(data).trim();	   // debug for code cube
+		//	console.log(serial);
 				clearInterval(timer);
 			};
 			port.onReceiveError = error => {
-			//	device.textContent = error;
+				device.textContent = error;
 			  device.textContent = 'Not Connected to Code Cube';
 				main.classList.add('error');
 			};
