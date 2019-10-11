@@ -36,7 +36,6 @@ var serial = {};
 			readLoop();
 		}, error => {
 				this.onReceiveError(error);
-				console.log('error');
 			});
 		};
 
@@ -67,6 +66,7 @@ var serial = {};
 			'value': 0x00,
 			'index': 0x02})
 			.then(() => this.device_.close());
+			console.log('error');
 	};
 
 	serial.Port.prototype.send = function(data) {
