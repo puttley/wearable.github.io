@@ -54,7 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			port.onReceive = data => {
 				let textDecoder = new TextDecoder();
-	 	    text.value = textDecoder.decode(data).trim();
+				try {
+	 	    	text.value = textDecoder.decode(data).trim();
+			  }
+				catch(err) {
+					console.log('myerror');
+				}
+
 		//	var serial = textDecoder.decode(data).trim();	   // debug for code cube
 		//	console.log(serial);
 				clearInterval(timer);
