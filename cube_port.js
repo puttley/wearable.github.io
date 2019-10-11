@@ -54,17 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			port.onReceive = data => {
 				let textDecoder = new TextDecoder();
+				console.log(data);
 	 	    text.value = textDecoder.decode(data).trim();
 		//	var serial = textDecoder.decode(data).trim();	   // debug for code cube
 		//	console.log(serial);
 				clearInterval(timer);
-				
-				port.onReceiveError = error => {
-			//		device.textContent = error;
-				  device.textContent = 'you disconnected me...'; // clicked disconnect
-					main.classList.add('error');
-				};
-
 			};
 			port.onReceiveError = error => {
 		//		device.textContent = error;
