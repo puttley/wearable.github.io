@@ -58,9 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	 	    	text.value = textDecoder.decode(data).trim();
 			  }
 				catch(err) {
-					console.log('myerror');
-					alert("Code Cube was unplugged from USB port without first clicking Disconnect. To re-connect, plug Code Cube into the USB port then click Disconnect and then Connect.")
-
+			//		console.log('myerror');
+			//		alert("Code Cube was unplugged from USB port without first clicking Disconnect. To re-connect, plug Code Cube into the USB port then click Disconnect and then Connect.")
+						location.reload();		// refresh the app from cache
 				}
 
 		//	var serial = textDecoder.decode(data).trim();	   // debug for code cube
