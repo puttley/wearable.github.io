@@ -36,6 +36,7 @@ var serial = {};
 			readLoop();
 		}, error => {
 				this.onReceiveError(error);
+						console.log('error');
 			});
 		};
 
@@ -59,7 +60,6 @@ var serial = {};
 	};
 
 	serial.Port.prototype.disconnect = function() {
-		console.log('disconnect');
 		return this.device_.controlTransferOut({
 			'requestType': 'class',
 			'recipient': 'interface',
