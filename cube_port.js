@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			connectButton.innerHTML = '<b>&times;</b> Disconnect';
 
 			device.innerHTML = `&#x2714; Connected with ${port.device_.productName}.`;
-			device.textContent = 'Connected to Code Cube';
+			device.textContent = 'Connected to Code Cube !';
 			main.classList.remove('error');
 
 			port.onReceive = data => {
@@ -80,8 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		}, error => {
 	//		device.textContent = error;
-  //    device.textContent = 'Code Cube not Connected...';
-			device.textContent = 'Code Cube was unplugged from USB port. Click Disconnect...';
+      device.textContent = 'Code Cube not Connected...';
 			main.classList.add('error');
 		});
 	}
