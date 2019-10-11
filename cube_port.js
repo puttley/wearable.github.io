@@ -54,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			port.onReceive = data => {
 				let textDecoder = new TextDecoder();
-				console.log(data);
 	 	    text.value = textDecoder.decode(data).trim();
 		//	var serial = textDecoder.decode(data).trim();	   // debug for code cube
 		//	console.log(serial);

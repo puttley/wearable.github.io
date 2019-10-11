@@ -36,6 +36,7 @@ var serial = {};
 			readLoop();
 		}, error => {
 				this.onReceiveError(error);
+				console.log('error');
 			});
 		};
 
