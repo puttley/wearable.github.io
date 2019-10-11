@@ -54,7 +54,6 @@ var serial = {};
 			'value': 0x01,
 			'index': 0x02}))
 	.then(() => {
-		  console.log('1');
 			readLoop();
 	});
 	};

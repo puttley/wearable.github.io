@@ -251,7 +251,12 @@
         alert(e);
       }
     }
-    
+
+    window.onerror = function (msg, url, lineNo, columnNo, error) {
+  // ... handle error ...
+  console.log(lineNo);
+  return false;
+}
 
 
   </script>
