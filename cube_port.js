@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				catch(err) {
 					console.log('myerror');
 					alert("Code Cube was unplugged from USB port without first clicking Disconnect. To re-connect, plug Code Cube into the USB port then click Disconnect and then Connect.")
-					device.textContent = 'Code Cube was unplugged from USB port. Click Disconnect...';
+
 				}
 
 		//	var serial = textDecoder.decode(data).trim();	   // debug for code cube
@@ -80,7 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		}, error => {
 	//		device.textContent = error;
-	    device.textContent = 'Code Cube not Connected...';
+  //    device.textContent = 'Code Cube not Connected...';
+			device.textContent = 'Code Cube was unplugged from USB port. Click Disconnect...';
 			main.classList.add('error');
 		});
 	}
