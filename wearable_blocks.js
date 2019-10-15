@@ -355,6 +355,8 @@ onchange: function(ev) {    // disallow nested loops - surround parent of 'x' ty
    if(block.type == 'cube_if_else') {this.unplug(true);}
    if(block.type == 'exp_if_block') {this.unplug(true);}
    if(block.type == 'exp_repeat') {this.unplug(true);}
+   if(block.type == 'cube_loop_until') {this.unplug(true);}
+   if(block.type == 'cube_loop_while') {this.unplug(true);}
   };
  }
 };
@@ -386,6 +388,8 @@ onchange: function(ev) {    // disallow nested loops - surround parent of 'x' ty
    if(block.type == 'cube_if_else') {this.unplug(true);}
    if(block.type == 'exp_if_block') {this.unplug(true);}
    if(block.type == 'exp_repeat') {this.unplug(true);}
+   if(block.type == 'cube_loop_until') {this.unplug(true);}
+   if(block.type == 'cube_loop_while') {this.unplug(true);}
   };
  }
 };
