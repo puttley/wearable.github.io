@@ -414,6 +414,7 @@ onchange: function(ev) {    // disallow nested loops - surround parent of 'x' ty
    var block = this.getSurroundParent();
    if(block.type == 'cube_loop_until') {this.unplug(true);}
    if(block.type == 'cube_loop_while') {this.unplug(true);}
+   if(block.type == 'exp_repeat') {this.unplug(true);}
   };
  }
 };
@@ -438,6 +439,7 @@ onchange: function(ev) {    // disallow nested loops - surround parent of 'x' ty
    var block = this.getSurroundParent();
    if(block.type == 'cube_loop_while') {this.unplug(true);}
    if(block.type == 'cube_loop_until') {this.unplug(true);}
+   if(block.type == 'exp_repeat') {this.unplug(true);}
   };
  }
 };
