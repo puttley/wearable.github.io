@@ -183,14 +183,14 @@ Blockly.JavaScript['cube_wait_until'] = function(block) {
 Blockly.JavaScript['cube_loop_until'] = function(block) {
   var value_condition = Blockly.JavaScript.valueToCode(block, 'condition', Blockly.JavaScript.ORDER_ATOMIC);
   var statements_until = Blockly.JavaScript.statementToCode(block, 'until');
-  var code = 241 + ',' + value_condition + ',' + statements_until + ',' + 128 + ',';
+  var code = 241 + ',' + value_condition + ',' + statements_until + ',' + 127 + ',';
   return code;
 };
 
 Blockly.JavaScript['cube_loop_while'] = function(block) {
   var value_condition = Blockly.JavaScript.valueToCode(block, 'condition', Blockly.JavaScript.ORDER_ATOMIC);
   var statements_while = Blockly.JavaScript.statementToCode(block, 'while');
-  var code = 240 + ',' + value_condition + ',' + statements_while + ',' + 128 + ',';
+  var code = 240 + ',' + value_condition + ',' + statements_while + ',' + 127 + ',';
   return code;
 };
 
