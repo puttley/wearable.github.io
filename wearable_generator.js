@@ -100,7 +100,7 @@ Blockly.JavaScript['exp_repeat'] = function(block) {
   var number_repeat = block.getFieldValue('repeat');
   var statements_repeat_loop = Blockly.JavaScript.statementToCode(block, 'repeat_loop');
   // TODO: Assemble JavaScript into code variable.
-  var code = 253 + ',' + number_repeat + ',' + statements_repeat_loop + ',' + 127 + ',';
+  var code = 253 + ',' + number_repeat + ',' + statements_repeat_loop + ',' + 196 + ',';
   return code;
 };
 
@@ -134,7 +134,7 @@ Blockly.JavaScript['exp_character'] = function(block) {
 Blockly.JavaScript['exp_if_block'] = function(block) {
   var value_if = Blockly.JavaScript.valueToCode(block, 'if', Blockly.JavaScript.ORDER_ATOMIC);
   var statements_doblocks = Blockly.JavaScript.statementToCode(block, 'doBlocks');
-  var code = 254 + ',' + value_if + ',' + statements_doblocks + ',' + 128 + ',';
+  var code = 254 + ',' + value_if + ',' + statements_doblocks + ',' + 198 + ',';
   return code;
 };
 
@@ -142,7 +142,7 @@ Blockly.JavaScript['cube_if_else'] = function(block) {
   var value_condition = Blockly.JavaScript.valueToCode(block, 'condition', Blockly.JavaScript.ORDER_ATOMIC);
   var statements_then = Blockly.JavaScript.statementToCode(block, 'then');
   var statements_else = Blockly.JavaScript.statementToCode(block, 'else');
-  var code = 242 + ',' + value_condition + ',' + statements_then + ',' + 128 + ','+ statements_else + ',' + 129 + ',';
+  var code = 242 + ',' + value_condition + ',' + statements_then + ',' + 198 + ','+ statements_else + ',' + 199 + ',';
   return code;
 };
 
@@ -164,7 +164,7 @@ Blockly.JavaScript['exp_wait'] = function(block) {
   var dropdown_action = block.getFieldValue('ACTION');
   var statements_doblocks = Blockly.JavaScript.statementToCode(block, 'doBlocks');
   // TODO: Assemble JavaScript into code variable.
-  var code = 244 + ',' + dropdown_action + ',' + statements_doblocks + ',' + 128 + ',';
+  var code = 244 + ',' + dropdown_action + ',' + statements_doblocks + ',' + 195 + ',';
   return code;
 };
 
@@ -183,14 +183,14 @@ Blockly.JavaScript['cube_wait_until'] = function(block) {
 Blockly.JavaScript['cube_loop_until'] = function(block) {
   var value_condition = Blockly.JavaScript.valueToCode(block, 'condition', Blockly.JavaScript.ORDER_ATOMIC);
   var statements_until = Blockly.JavaScript.statementToCode(block, 'until');
-  var code = 241 + ',' + value_condition + ',' + statements_until + ',' + 127 + ',';
+  var code = 241 + ',' + value_condition + ',' + statements_until + ',' + 197 + ',';
   return code;
 };
 
 Blockly.JavaScript['cube_loop_while'] = function(block) {
   var value_condition = Blockly.JavaScript.valueToCode(block, 'condition', Blockly.JavaScript.ORDER_ATOMIC);
   var statements_while = Blockly.JavaScript.statementToCode(block, 'while');
-  var code = 240 + ',' + value_condition + ',' + statements_while + ',' + 127 + ',';
+  var code = 240 + ',' + value_condition + ',' + statements_while + ',' + 197 + ',';
   return code;
 };
 
