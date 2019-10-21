@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
 				port = selectedPort;
 				connect();
 			}).catch(error => {
-	//			device.textContent = error;
-				device.textContent = 'Code Cube not Connected...';	// show this instead of Chrome error
+				device.textContent = error;
+	//			device.textContent = 'Code Cube not Connected...';	// show this instead of Chrome error
 
 			});
 		}
