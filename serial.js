@@ -26,7 +26,7 @@ var serial = {};
       { 'vendorId': 0x2341, 'productId': 0x8057 }, // Arduino NANO 33 IoT
       { 'vendorId': 0x239A }, // Adafruit Boards!
     ];
-    return await navigator.usb.requestDevice({ 'filters': filters }).then(
+    return navigator.usb.requestDevice({ 'filters': filters }).then(
       device => new serial.Port(device)
 	  );
   }
