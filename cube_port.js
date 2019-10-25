@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
 				port = selectedPort;
 				connect();
 			}).catch(error => {
-				device.textContent = error;
-	//			device.textContent = 'Code Cube not Connected...';	// show this instead of Chrome error
+	//		device.textContent = error;
+				device.textContent = 'Code Cube Disconnected...';	// show this instead of Chrome error
 
 			});
 		}
@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
 				clearInterval(timer);
 			};
 			port.onReceiveError = error => {
-				device.textContent = error;
-		//	  device.textContent = 'Code Cube not Connected...'; // clicked disconnect
+	//		device.textContent = error;
+			  device.textContent = 'Code Cube Disconnected...'; // clicked disconnect
 				main.classList.add('error');
 			};
 
@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	//		}, 1000);
 
 		}, error => {
-			device.textContent = error;
-  //    device.textContent = 'Code Cube not Connected...';
+//		device.textContent = error;
+      device.textContent = 'Code Cube Disconnected...';
 			main.classList.add('error');
 		});
 	}

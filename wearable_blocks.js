@@ -734,7 +734,10 @@ Blockly.Blocks['pixel_matrix'] = {
     this.setColour("#78909C");
  this.setTooltip("");
  this.setHelpUrl("");
-  }
+},
+onchange: function(ev) {    // disallow inline inputs
+  this.setInputsInline(false);
+ }
 };
 
 Blockly.Blocks['frame_strip_15'] = {

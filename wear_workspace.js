@@ -41,7 +41,7 @@ Blockly.mainWorkspace.clear();
 Blockly.mainWorkspace.addChangeListener(Blockly.Events.disableOrphans);
 var xml = '<xml><block type="exp_start" movable="true"></block></xml>';  // add default block back
 Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(xml), workspace);
-renderContent();
+//renderContent();
 
 
 /* TODO: Change workspace blocks XML ID if necessary. Can export workspace blocks XML from Workspace Factory. */
