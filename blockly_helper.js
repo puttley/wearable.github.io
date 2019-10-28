@@ -41,9 +41,9 @@ function restore_blocks() {
     //Blockly.mainWorkspace.scrollCenter(workspace);	// set scroll bars to center
     //Blockly.mainWorkspace.scroll(100,100);
 
-//   Blockly.mainWorkspace.zoomToFit();
-//   Blockly.mainWorkspace.setScale(0.7);
-//   Blockly.mainWorkspace.scrollCenter(workspace);	// set scroll bars to center
+   Blockly.mainWorkspace.zoomToFit();
+   Blockly.mainWorkspace.setScale(0.7);
+   Blockly.mainWorkspace.scrollCenter(workspace);	// set scroll bars to center
 
   }
  }
