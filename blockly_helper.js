@@ -29,6 +29,22 @@ function restore_blocks() {
     Blockly.mainWorkspace.clear();  // clear the workspace
     var xml = Blockly.Xml.textToDom(window.localStorage.arduino);
     Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
+
+    //Blockly.mainWorkspace.render();
+    //Blockly.mainWorkspace.zoomCenter(workspace);
+    //Blockly.mainWorkspace.resizeContents(workspace);
+    //Blockly.mainWorkspace.resize(workspace);
+    //Blockly.mainWorkspace.render(workspace);
+    //Blockly.mainWorkspace.scrollCenter(workspace);
+    //Blockly.mainWorkspace.zoomToFit(workspace);
+    //Blockly.mainWorkspace.setScale(0.7);
+    //Blockly.mainWorkspace.scrollCenter(workspace);	// set scroll bars to center
+    //Blockly.mainWorkspace.scroll(100,100);
+
+//   Blockly.mainWorkspace.zoomToFit();
+//   Blockly.mainWorkspace.setScale(0.7);
+//   Blockly.mainWorkspace.scrollCenter(workspace);	// set scroll bars to center
+
   }
  }
 
@@ -89,13 +105,15 @@ function load(event) {
         Blockly.mainWorkspace.clear();
       }
       Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
+
     }
     // Reset value of input after loading because Chrome will not fire
     // a 'change' event if the same file is loaded again.
     document.getElementById('load').value = '';
+
   };
   reader.readAsText(files[0]);
-}
+  }
 
 /**
  * Discard all blocks from the workspace.
@@ -106,7 +124,9 @@ function discard() {
     Blockly.mainWorkspace.clear();
     var xml = '<xml><block type="exp_start" deletable="true" movable="true"></block></xml>';  // add default block back
     Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(xml), workspace);
-    renderContent();
+    Blockly.mainWorkspace.zoomToFit();
+    Blockly.mainWorkspace.setScale(0.7);
+    Blockly.mainWorkspace.scrollCenter(workspace);	// set scroll bars to center
 
   }
 }

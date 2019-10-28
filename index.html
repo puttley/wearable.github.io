@@ -86,6 +86,7 @@
 <!-- <div id="blocklyDiv" style="height: 640px; width: 100%;"></div> -->
 
 <div id="blocklyDiv" style="height: 72vh; width: 95%; margin-bottom: 5px;"></div>
+
 <div id="memory"></div>
 
   <xml id="toolbox" style="display: none">
@@ -140,7 +141,7 @@
 
   <script>
 
-//    auto_save_and_restore_blocks();      // triggers a save session when app is unloaded
+//    auto_save_and_restore_blocks();     // triggers a save session when app is unloaded
                                           // enable to have the app automatically save a session
                                           // Hook a save function onto unload.
     bindEvent(window, 'unload', backup_blocks); // save a local cache of the previous workspace upon unload
@@ -171,6 +172,9 @@
             Blockly.mainWorkspace.clear();
           }
           Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
+          Blockly.mainWorkspace.zoomToFit();
+          Blockly.mainWorkspace.setScale(0.7);
+          Blockly.mainWorkspace.scrollCenter(workspace);	// set scroll bars to center
         }
         // Reset value of input after loading because Chrome will not fire
         // a 'change' event if the same file is loaded again.
