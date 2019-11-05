@@ -30,26 +30,14 @@ function restore_blocks() {
     var xml = Blockly.Xml.textToDom(window.localStorage.arduino);
     Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
 
-    //Blockly.mainWorkspace.render();
-    //Blockly.mainWorkspace.zoomCenter(workspace);
-    //Blockly.mainWorkspace.resizeContents(workspace);
-    //Blockly.mainWorkspace.resize(workspace);
-    //Blockly.mainWorkspace.render(workspace);
-    //Blockly.mainWorkspace.scrollCenter(workspace);
-    //Blockly.mainWorkspace.zoomToFit(workspace);
-    //Blockly.mainWorkspace.setScale(0.7);
-    //Blockly.mainWorkspace.scrollCenter(workspace);	// set scroll bars to center
-    //Blockly.mainWorkspace.scroll(100,100);
-
-   Blockly.mainWorkspace.zoomToFit();
-   Blockly.mainWorkspace.setScale(0.7);
-   Blockly.mainWorkspace.scrollCenter(workspace);	// set scroll bars to center
+    Blockly.mainWorkspace.setScale(0.7);   // default scale
+    Blockly.mainWorkspace.scrollCenter();	// set scroll bars to center
 
   }
  }
 
 /**
-* Save Arduino generated code to local file.
+* Save generated code to local file.
 */
 function saveCode() {
   var fileName = window.prompt('What would you like to name your file?', 'Cube')

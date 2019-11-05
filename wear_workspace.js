@@ -41,15 +41,8 @@ Blockly.mainWorkspace.clear();
 Blockly.mainWorkspace.addChangeListener(Blockly.Events.disableOrphans);
 var xml = '<xml><block type="exp_start" movable="true"></block></xml>';  // add default block back
 Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(xml), workspace);
-//Blockly.mainWorkspace.scrollCenter(workspace);	// set scroll bars to center
-//Blockly.mainWorkspace.render();
-//Blockly.mainWorkspace.zoomCenter(workspace);
-//Blockly.mainWorkspace.resizeContents(workspace);
-//Blockly.mainWorkspace.resize(workspace);
-//Blockly.mainWorkspace.render(workspace);
-//Blockly.mainWorkspace.scrollCenter(workspace);
-//Blockly.mainWorkspace.zoomToFit(workspace);
-//Blockly.mainWorkspace.setScale(0.7);
+
+Blockly.mainWorkspace.scrollCenter();
 
 /* TODO: Change workspace blocks XML ID if necessary. Can export workspace blocks XML from Workspace Factory. */
 var workspaceBlocks = document.getElementById("workspaceBlocks");
