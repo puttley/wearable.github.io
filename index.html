@@ -217,12 +217,12 @@
 
     function sendCode(){
       var code = Blockly.JavaScript.workspaceToCode(workspace);
-      if(code.charAt(0) == '('){
+      if(code.charAt(0) == '(' ){
         port.send(new TextEncoder("utf-8").encode(textInput));
       }else{
         alert("Code Error: Check to be sure that the first block column is the on program start
         column the first column to the left of the workspace, and that any new block columns
-        are to the right and lower than each previous column.")
+        are to the right and lower than each previous column.");
       }
 
 
