@@ -218,6 +218,7 @@
     function sendCode(){
       var code = Blockly.JavaScript.workspaceToCode(workspace);
       if(code.charAt(0) == '(' ){
+        const textInput = code;
         port.send(new TextEncoder("utf-8").encode(textInput));
       }else{
         alert("Code Error: Check to be sure that the first block column is the on program start
