@@ -222,7 +222,7 @@
         const textInput = code;
         port.send(new TextEncoder("utf-8").encode(textInput));
       }else{
-        alert("Code Error: If using multiple code columns, check to be sure that the first column on the far left of the workspace is the on program start column, and each additional new block column is placed to the right and lower than each previous new block column.");
+        alert("Code Error: Code Cube block columns execute from left to right horizontally and from top to bottom vertically on the code workspace. When using multiple code columns, check to be sure that the first column on the far left of the workspace is the 'on program start' column, and each additional 'new block column' is placed to the right and slightly lower than each previous block column.");
       }
 
 
