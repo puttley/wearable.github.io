@@ -222,7 +222,7 @@
         const textInput = code;
         port.send(new TextEncoder("utf-8").encode(textInput));
       }else{
-        alert("error");
+        alert("Code Error: If using multiple code columns, check to be sure that the first column on the far left of the workspace is the on program start column, and each additional new block column is placed to the right and lower than each previous new block column");
       }
 
 
