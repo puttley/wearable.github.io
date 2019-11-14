@@ -217,8 +217,8 @@
 
     function sendCode(){
       var code = Blockly.JavaScript.workspaceToCode(workspace);
-      var check = code.charAt(0);
-      if(check == '(' ){
+      var check = code.charCodeAt(0);
+      if(check == 40){            // checks to be sure that a paranethis is first in the code string
         const textInput = code;
         port.send(new TextEncoder("utf-8").encode(textInput));
       }else{
